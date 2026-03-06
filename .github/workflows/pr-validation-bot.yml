@@ -1,0 +1,236 @@
+name: PR Validation & Feedback Bot
+# Student-focused workflow: validates PRs, welcomes first-timers, provides educational feedback
+# This workflow runs on ALL branches - students work on feature branches
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  statuses: write
+
+jobs:
+  welcome-first-timer:
+    name: Welcome First-Time Contributor
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    
+    steps:
+      - name: Check if first-time contributor
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const { data: prs } = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'all',
+                creator: context.payload.pull_request.user.login
+              });
+              
+              const isFirstPR = prs.length === 1;
+              
+              if (isFirstPR) {
+                const welcomeBody = [
+                  '## Welcome to Your First Pull Request! 🎉',
+                  '',
+                  'Hi @' + context.payload.pull_request.user.login + '! Congratulations on opening your first PR in the Learning Room!',
+                  '',
+                  '### What Happens Next',
+                  '',
+                  '1. **Automated Checks** — This bot validates your PR within ~30 seconds',
+                  '2. **Review Feedback** — You\'ll see a validation report below',
+                  '3. **Peer Review** — A facilitator or peer will review your changes',
+                  '4. **Iterate** — Make updates if needed based on feedback',
+                  '5. **Merge** — Once approved, your changes are merged!',
+                  '',
+                  '### While You Wait',
+                  '',
+                  '- ✅ Check the automated validation report below',
+                  '- 📖 Review the [PR Guidelines](../docs/05-working-with-pull-requests.md)',
+                  '- 👀 Look at other open PRs to learn from examples',
+                  '- 💬 Ask questions in comments - no question is too basic!',
+                  '',
+                  '**Remember:** Every experienced open source contributor started exactly where you are now.',
+                  'Your perspective and effort matter!',
+                  '',
+                  '---',
+                  '*This is an automated message from the Learning Room Bot.*'
+                ].join('\n');
+
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  body: welcomeBody
+                });
+                
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  labels: ['first-time-contributor', 'needs-review']
+                });
+              }
+            } catch (error) {
+              console.error('Error checking first-time contributor status:', error);
+            }
+
+  validate-pr:
+    name: Validate PR & Provide Feedback
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Python dependencies
+        run: |
+          pip install requests markupsafe
+
+      - name: Run PR validation
+        id: validate
+        run: node .github/scripts/validate-pr.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+
+      - name: Post validation results
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const { buildValidationReportBody } = require('./.github/scripts/validation-report.js');
+            let results;
+            
+            try {
+              if (!fs.existsSync('validation-results.json')) {
+                console.log('Warning: validation-results.json not found');
+                results = {
+                  passed: false,
+                  required: [{
+                    name: 'Validation Output',
+                    passed: false,
+                    message: 'Validation results not found. Check workflow logs for details.'
+                  }],
+                  suggestions: [],
+                  accessibility: [],
+                  resources: []
+                };
+              } else {
+                results = JSON.parse(fs.readFileSync('validation-results.json', 'utf8'));
+              }
+            } catch (error) {
+              console.error('Error reading validation results:', error);
+              results = {
+                passed: false,
+                required: [{
+                  name: 'Validation System Error',
+                  passed: false,
+                  message: `Error: ${error.message}`
+                }],
+                suggestions: [],
+                accessibility: [],
+                resources: []
+              };
+            }
+
+            const body = buildValidationReportBody(results);
+            
+            // Find and update existing bot comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('PR Validation Report')
+            );
+            
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: body
+              });
+            }
+
+  comment-responder:
+    name: Respond to Help Requests
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issue_comment'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Respond to comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { getAutoResponse } = require('./.github/scripts/comment-responder.js');
+            
+            const author = context.payload.comment.user.login;
+            const body = context.payload.comment.body;
+            
+            const response = getAutoResponse(body, author);
+            
+            if (response) {
+              try {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body: response
+                });
+              } catch (error) {
+                console.error('Error posting response:', error);
+              }
+            }

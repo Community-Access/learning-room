@@ -1,0 +1,56 @@
+name: Advanced Challenge
+description: Claim an advanced or expert-level challenge (3+ merged PRs required)
+title: "[Advanced] "
+labels: ["challenge: advanced"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Advanced Challenge
+
+        Advanced challenges involve peer review, documentation creation, mentoring, and system-level thinking.
+
+        **Before starting:** We recommend completing the [Review Pull Requests](https://github.com/skills/review-pull-requests) Skills module. It teaches the review workflow, inline comments, and approval process you will use here.
+
+  - type: dropdown
+    id: challenge
+    attributes:
+      label: Which challenge are you working on?
+      options:
+        - "Challenge 7: Review for Accessibility"
+        - "Challenge 8: Create Documentation"
+        - "Challenge 9: Mentor a Peer"
+        - "Challenge 10: Design a Challenge (Expert)"
+        - "Challenge 11: Accessibility Audit (Expert)"
+        - "Challenge 12: Create Issue Template (Expert)"
+        - "Custom Challenge (describe below)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: What do you plan to do?
+      description: Describe your approach, scope, and expected deliverables.
+      placeholder: "I plan to conduct an accessibility review of PR #XX, focusing on..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills-reflection
+    attributes:
+      label: Skills module connection (optional)
+      description: If you completed the Review Pull Requests Skills module, share how it prepared you for this challenge.
+      placeholder: "The Skills module taught me to leave inline comments on specific lines, which I will use to..."
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Before you begin
+      options:
+        - label: I have at least 3 merged PRs in this repository
+          required: true
+        - label: I have read the challenge description in [CHALLENGES.md](../docs/CHALLENGES.md)
+          required: true
+        - label: I am prepared to spend the estimated time on this challenge
+          required: true

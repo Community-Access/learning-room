@@ -1,0 +1,54 @@
+name: Beginner Challenge
+description: Claim a beginner-level challenge (0+ merged PRs required)
+title: "[Beginner] "
+labels: ["challenge: beginner", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Beginner Challenge
+
+        Welcome! Beginner challenges are perfect for your first contribution.
+
+        **Before starting:** We recommend completing the [Introduction to GitHub](https://github.com/skills/introduction-to-github) Skills module. It teaches the branch, commit, PR, merge workflow you will use here.
+
+  - type: dropdown
+    id: challenge
+    attributes:
+      label: Which challenge are you working on?
+      options:
+        - "Challenge 1: Fix Broken Link"
+        - "Challenge 2: Add Keyboard Shortcut"
+        - "Challenge 3: Complete Welcome Guide"
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Which file will you edit?
+      description: "Example: docs/welcome.md"
+      placeholder: "docs/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: What do you plan to change?
+      description: Describe your planned fix in 2-3 sentences.
+      placeholder: "I plan to fix the broken link on line 24 by updating the path to..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Before you begin
+      options:
+        - label: I have read the challenge description in [CHALLENGES.md](../docs/CHALLENGES.md)
+          required: true
+        - label: I understand how to create a branch and open a pull request
+          required: true
+        - label: No one else has claimed this specific issue (I checked open issues)
+          required: true
