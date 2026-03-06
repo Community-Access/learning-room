@@ -111,12 +111,12 @@ function getAutoResponse(commentBody, author) {
       '**Here\'s what to do next:**',
       '',
       '1. **Create a new branch** for this work',
-      '   - Use naming like: `fix/yourname-issue${context?.issue?.number || '123'}`',
+      '   - Use naming like: `fix/yourname-issue123`',
       '2. **Make your edits** according to the challenge description',
       '3. **Test your changes** (read through what you changed)',
       '4. **Commit with a clear message** explaining what you fixed',
       '5. **Push to GitHub**',
-      '6. **Open a PR** linking back to this issue with `Closes #${context?.issue?.number || 'ISSUE_NUMBER'}`',
+      '6. **Open a PR** linking back to this issue with `Closes #ISSUE_NUMBER`',
       '',
       '[→ Full PR Guide](../docs/OPENING_FIRST_PR.md)',
       '',
@@ -134,3 +134,4 @@ function getAutoResponse(commentBody, author) {
 module.exports = {
   getAutoResponse
 };
+
