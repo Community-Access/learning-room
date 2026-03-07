@@ -12,7 +12,6 @@ This document is your **single source of truth** for all workshop challenges. It
 5. Open a PR that references the issue (`Closes #XX`)
 6. Watch the magic happen - bot validation, auto-close, and you've leveled up!
 
----
 
 ### Facilitators and Admins
 
@@ -23,7 +22,6 @@ Are you managing this workshop? See [FACILITATOR_CHALLENGES.md](../../FACILITATO
 - Archiving and refreshing issues between cohorts
 - Pre-workshop setup checklist
 
----
 
 ## How to Find Your Challenges
 
@@ -51,7 +49,6 @@ This shows all challenges assigned to you.
 ### Method 3: This Challenge Hub (Below)
 Expand any chapter section below to see the full instructions. The hub is the **detailed reference** - issues are the **lightweight tracker**.
 
----
 
 ## Challenge to Issue Lifecycle
 
@@ -71,9 +68,8 @@ Here's the flow every time you complete a challenge:
 
 Each step is explained in the issue description. The issue is your **contract with GitHub** - it proves you did the work.
 
----
 
-## 📊 Chapter Challenge Map (Chapters 2-16)
+##  Chapter Challenge Map (Chapters 2-16)
 
 Use this map for a consistent student experience: safe start, small actions, visible progress.
 
@@ -90,8 +86,8 @@ Use this map for a consistent student experience: safe start, small actions, vis
 | --- | --- | --- | --- | --- |
 | Chapter 2: Navigating Repositories | Orientation only | 0 | Readiness check with facilitator | None |
 | Chapter 3: The Learning Room | System orientation only | 0 | Can explain issue -> branch -> PR flow | None |
-| Chapter 4: Working with Issues | Micro issue challenges | 3 | Issue creation + claim + question comment | Manual/facilitator |
-| Chapter 5: Working with Pull Requests | Bot-validated PR challenges | 3 | Linked PR (`Closes #XX`) + passing checks | PR bot validation |
+| Chapter 4: Working with Issues | Micro issue challenges (no branch needed) | 3 | Issue creation + claim + question comment on challenge issue | Manual/facilitator |
+| Chapter 5: Working with Pull Requests | Bot-validated PR challenges (first branch + file edit) | 3 | Linked PR (`Closes #XX`) + passing checks | PR bot validation |
 | Chapter 6: Merge Conflicts | Controlled single drill | 1 | Issue-linked PR resolving conflict markers | Manual by default |
 | Chapter 7: Culture and Etiquette | Guided reflection | 1 optional | Structured reflection comment | None |
 | Chapter 8: Labels/Milestones/Projects | Guided triage recommendation | 1 | Triage recommendation comment (or apply labels if permitted) | None by default |
@@ -112,7 +108,6 @@ Use this map for a consistent student experience: safe start, small actions, vis
 - Use PR checks only where technical validation is deterministic.
 - In chapter challenge sections, always include: actionable steps, expected outcomes, "If You Get Stuck," and a short learning moment.
 
----
 
 ## Full Challenge Details (Expandable Reference)
 
@@ -121,16 +116,48 @@ Students can expand any chapter below to see the complete challenge instructions
 <details>
 <summary><strong>Chapter 4: Working with Issues</strong> - 3 Micro-Challenges</summary>
 
+> **Branch guidance:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.
+
 ### Challenge Set
 
-1. **Create your first issue**
-   - Create one issue with a clear title and short description.
+1. **Create your first issue** - file a new issue with a clear title and description.
+2. **Claim a challenge issue** - comment on an existing beginner issue to claim it.
+3. **Ask one clarifying question** - add a question comment on your claimed issue.
 
-2. **Claim a challenge issue**
-   - Comment `I'd like to try this!` on a beginner challenge issue.
+### Challenge 4.1: Create Your First Issue
 
-3. **Ask one clarifying question**
-   - Add one question comment on your claimed issue.
+1. Open the `learning-room` repository in your browser.
+2. Navigate to the **Issues** tab.
+3. Activate the **New issue** button.
+4. Type a clear, specific title (at least 12 characters). For example: "Add missing contributor background paragraph in welcome.md".
+5. Write a meaningful description (at least 80 characters) explaining the problem and where it is.
+6. Activate **Submit new issue**.
+7. Note the issue number for your evidence.
+
+### Challenge 4.2: Claim a Challenge Issue
+
+1. Open the Issues tab and filter: `is:open label:"challenge: beginner"`.
+2. Pick an issue that interests you and open it.
+3. Read the description to understand what needs to be done.
+4. Comment: `I'd like to try this!`
+5. Note the issue number. This is the issue you will fix in Chapter 5.
+
+### Challenge 4.3: Ask One Clarifying Question
+
+1. Open the issue you claimed in Challenge 4.2.
+2. Re-read the description. Think about what is unclear.
+3. Post one specific question as a comment (for example: "Should I add the paragraph after the existing heading or create a new subsection?").
+
+### Completing Chapter 4
+
+Post a comment on your assigned Chapter 4 challenge issue with your evidence:
+
+```text
+Chapter 4 completed:
+- Challenge 4.1: Created issue #[number]
+- Challenge 4.2: Claimed issue #[number]
+- Challenge 4.3: Asked question on issue #[number]
+```
 
 ### Expected Outcomes
 
@@ -154,16 +181,54 @@ Issues are not just task lists. They are collaborative spaces where clear commun
 <details>
 <summary><strong>Chapter 5: Working with Pull Requests</strong> - 3 PR-Validated Challenges</summary>
 
+> **Branch guidance:** This is the first chapter where you edit files and create branches.
+>
+> - **Web editor (recommended):** When you edit a file on GitHub.com and click "Propose changes," GitHub creates a branch for you. Name it `fix/yourname-issueXX`.
+> - **Local Git:** Create a branch with `git checkout -b fix/yourname-issueXX` from `main`.
+> - **Do NOT use your `username-practice` branch yet.** That is for Chapter 11 and beyond.
+
 ### Challenge Set
 
-1. **Create one small branch change**
-   - Edit only the file required by your claimed issue.
+1. **Create one small branch change** - edit the file specified in your claimed issue.
+2. **Open a linked PR** - use the PR template and include `Closes #XX`.
+3. **Pass required checks** - respond to bot feedback until all required checks pass.
 
-2. **Open a linked PR**
-   - Use PR template and include `Closes #XX`.
+### Challenge 5.1: Create One Small Branch Change
 
-3. **Pass required checks**
-   - Respond to bot feedback until required checks pass.
+Open the issue you claimed in Chapter 4.2. It tells you which file to edit.
+
+The following table summarizes the practice files.
+
+| File | What to fix |
+|------|-------------|
+| `docs/welcome.md` | Three `[TODO]` sections where content is missing |
+| `docs/keyboard-shortcuts.md` | Intentional errors in shortcut references |
+| `docs/setup-guide.md` | Broken links and incomplete steps |
+
+**Using the web editor:**
+
+1. Navigate to the file in the `learning-room` repository.
+2. Activate the **pencil icon** (Edit this file).
+3. Make your change (keep it small and focused).
+4. Activate **Commit changes**.
+5. In the branch name field, type: `fix/yourname-issueXX`.
+6. Select **Create a new branch for this commit and start a pull request**.
+7. Activate **Propose changes**.
+
+### Challenge 5.2: Open a Linked PR
+
+1. On the "Open a pull request" page, write a descriptive title.
+2. In the body, include a summary of your change (at least 50 characters) and the line `Closes #XX` (where XX is your Chapter 5 challenge issue number).
+3. Verify the base branch is `main` and the compare branch is your `fix/` branch.
+4. Activate **Create pull request**.
+
+### Challenge 5.3: Pass Required Checks
+
+1. Wait about 30 seconds. The bot posts a validation comment.
+2. Read the bot feedback. It checks: issue reference, description length, file location, and accessibility.
+3. If the bot reports failures, edit the file again (directly on your branch via the Files changed tab pencil icon), fix the issue, and commit. The bot re-runs automatically.
+4. Repeat until all checks show green checkmarks.
+5. Request a review from a peer or facilitator.
 
 ### Expected Outcomes
 
@@ -694,7 +759,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 </details>
 
----
 
 ## How to Start a Challenge
 
@@ -706,7 +770,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 6. **Get peer review** and incorporate feedback
 7. **Merge** when approved!
 
----
 
 ## Beginner Challenges (0+ PRs)
 
@@ -732,7 +795,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#1-fix-broken-link-skill-markdown)
 
----
 
 ### Challenge 2: Add Keyboard Shortcut
 - **Issue Label:** `challenge: beginner`, `skill: markdown`
@@ -754,7 +816,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#2-add-keyboard-shortcut-skill-markdown)
 
----
 
 ### Challenge 3: Complete Welcome Guide
 - **Issue Label:** `challenge: beginner`, `skill: markdown`
@@ -777,7 +838,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#3-complete-welcome-guide-skill-markdown)
 
----
 
 ## Intermediate Challenges (1+ PRs)
 
@@ -802,7 +862,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#4-fix-heading-hierarchy-skill-accessibility)
 
----
 
 ### Challenge 5: Improve Link Text
 - **Issue Label:** `challenge: intermediate`, `skill: accessibility`
@@ -825,7 +884,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#5-improve-link-text-skill-accessibility)
 
----
 
 ### Challenge 6: Add Alt Text
 - **Issue Label:** `challenge: intermediate`, `skill: accessibility`
@@ -848,7 +906,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#6-add-alt-text-skill-accessibility)
 
----
 
 ## Advanced Challenges (3+ PRs)
 
@@ -875,7 +932,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#7-review-for-accessibility-skill-review)
 
----
 
 ### Challenge 8: Create Documentation
 - **Issue Label:** `challenge: advanced`, `skill: documentation`
@@ -900,7 +956,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#8-create-documentation-skill-documentation)
 
----
 
 ### Challenge 9: Mentor a Peer
 - **Issue Label:** `challenge: advanced`, `skill: collaboration`
@@ -925,7 +980,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#9-mentor-a-peer-skill-collaboration)
 
----
 
 ## Expert Challenges (5+ PRs)
 
@@ -953,7 +1007,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#10-design-a-challenge-skill-creation)
 
----
 
 ### Challenge 11: Accessibility Audit
 - **Issue Label:** `challenge: expert`, `skill: accessibility`
@@ -979,7 +1032,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#11-accessibility-audit-skill-accessibility)
 
----
 
 ### Challenge 12: Create Issue Template
 - **Issue Label:** `challenge: expert`, `skill: creation`
@@ -1004,7 +1056,6 @@ The 55 agents exist because someone did the manual work first, then automated th
 
 [**View Detailed Instructions →**](../../.github/docs/LEARNING_PATHS.md#12-create-issue-template-skill-creation)
 
----
 
 ## Group Challenges
 
@@ -1017,7 +1068,6 @@ These challenges require collaboration with your study group:
 
 [**View Group Challenges →**](GROUP_CHALLENGES.md)
 
----
 
 ## Guided Chapter Walkthroughs (No Bot Grading)
 
@@ -1037,7 +1087,6 @@ These are still challenge activities, but they are not scored by the PR validati
 - **Evidence:** Completion comment in assigned issue (github.dev open, screen reader mode, Explorer, symbols, Command Palette)
 - **Reference:** `docs/10-vscode-basics.md#guided-walkthrough-challenge-vs-code-accessibility-baseline-no-bot-check`
 
----
 
 ## Custom Challenges
 
@@ -1052,7 +1101,6 @@ These are still challenge activities, but they are not scored by the PR validati
 
 Facilitators will review and may approve custom challenges!
 
----
 
 ## Challenge Status
 
@@ -1065,7 +1113,6 @@ Issues assigned to someone are currently claimed. You can watch them to see solu
 ### Completed
 Closed issues with merged PRs represent completed challenges. Great for inspiration!
 
----
 
 ## Need Help?
 
@@ -1082,7 +1129,6 @@ Closed issues with merged PRs represent completed challenges. Great for inspirat
 4. **Ask study group** - Use your group issue thread
 5. **Ask facilitators** - Tag them in your PR
 
----
 
 ## Tips for Success
 
@@ -1110,6 +1156,5 @@ Closed issues with merged PRs represent completed challenges. Great for inspirat
 - Review the resources again
 - Help others with similar challenges
 
----
 
 *Challenges designed for progressive skill building and real-world applicability. Every challenge completed makes you a better contributor!*
