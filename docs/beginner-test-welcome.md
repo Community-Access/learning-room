@@ -25,6 +25,6 @@ Here's how to make your first pull request:
 
 ## Resources
 
-For more information, [click here to read the full guide](./docs/complete-guide.md).
+For more information, [click here to read the full guide](https://community-access.org/git-going-with-github/docs/course-guide.html).
 
 Good luck! We're excited to have you here.
