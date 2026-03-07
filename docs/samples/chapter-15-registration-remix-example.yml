@@ -1,0 +1,73 @@
+name: "Bug Report - Workshop Practice"
+description: "Report a bug in workshop materials or exercises"
+title: "[BUG] {Short summary of the problem}"
+labels: ["bug", "needs-triage", "workshop"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Clear details help maintainers fix issues faster.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence that describes the issue.
+      placeholder: Keyboard shortcut in Chapter 10 does not match VoiceOver behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact Level
+      description: How much does this affect completion of the chapter?
+      options:
+        - Minor (workaround available)
+        - Medium (slows progress)
+        - High (blocks completion)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which setup were you using?
+      options:
+        - Windows + NVDA
+        - Windows + JAWS
+        - macOS + VoiceOver
+        - Browser only (github.dev)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List exact steps so someone else can reproduce the issue.
+      placeholder: |
+        1. Open Chapter 10
+        2. Press shortcut listed in Step 2
+        3. Observe unexpected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Optional context, workaround, or links.
+    validations:
+      required: false
