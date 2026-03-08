@@ -48,7 +48,7 @@ Use these keys to jump to specific element types on any GitHub page.
 
 JAWS (Job Access With Speech) is a professional screen reader for Windows made by Freedom Scientific.
 
-### Single-Key Navigation (Virtual Cursor)
+#### Single-Key Navigation (Virtual Cursor)
 
 | Key     | Moves to                   |
 | ------- | -------------------------- |
@@ -62,7 +62,7 @@ JAWS (Job Access With Speech) is a professional screen reader for Windows made b
 | T       | Next table                 |
 | R       | Next landmark region       |
 
-### Switching Modes
+#### Switching Modes
 
 | Key          | Action                              |
 | ------------ | ----------------------------------- |
@@ -70,7 +70,7 @@ JAWS (Job Access With Speech) is a professional screen reader for Windows made b
 | Insert+Z     | Toggle Virtual PC Cursor            |
 | Num Pad Plus | Open PC Cursor (exit forms mode)    |
 
-### Reading Commands
+#### Reading Commands
 
 | Key      | Action                              |
 | -------- | ----------------------------------- |
@@ -107,7 +107,7 @@ Element types available in the Rotor: Headings, Links, Form Controls, Tables, La
 
 ---
 
-## Screen-Reader-Neutral Shortcuts (All Screen Readers)
+### Screen-Reader-Neutral Shortcuts (All Screen Readers)
 
 These shortcuts work in GitHub regardless of screen reader, because they are browser or operating system shortcuts.
 
