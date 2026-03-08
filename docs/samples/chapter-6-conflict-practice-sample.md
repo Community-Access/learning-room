@@ -1,4 +1,4 @@
-# Chapter 6 Conflict Practice Sample
+# Chapter 7 Conflict Practice Sample
 
 Use this sample to understand what conflict markers look like and what the resolved result should be.
 

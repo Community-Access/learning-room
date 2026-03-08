@@ -15,20 +15,20 @@ The workshop uses **progressive skill-building** organized into 16 chapters acro
 
 ## Workshop Structure
 
-### Day 1: GitHub Fundamentals (Chapters 0-9)
+### Day 1: GitHub Fundamentals (Chapters 0-10)
 
 | Block | Chapters | Focus | Challenge Type |
 |-------|----------|-------|---------------|
 | **Block 0** | 0-3 | Setup, navigation, Learning Room orientation | No graded challenges |
-| **Block 1** | 4-5 | Issues and Pull Requests | Comment-based (Ch 4), PR-based (Ch 5) |
-| **Block 2** | 6-7 | Merge conflicts and community culture | PR-based (Ch 6), reflection (Ch 7) |
-| **Block 3** | 8-9 | Organization (labels/milestones) and notifications | Comment-based |
+| **Block 1** | 4-6 | Issues, VS Code Accessibility, and Pull Requests | Comment-based (Ch 4-5), PR-based (Ch 7) |
+| **Block 2** | 7-8 | Merge conflicts and community culture | PR-based (Ch 8), reflection (Ch 9) |
+| **Block 3** | 9-10 | Organization (labels/milestones) and notifications | Comment-based |
 
-### Day 2: VS Code and Advanced Workflows (Chapters 10-16)
+### Day 2: VS Code and Advanced Workflows (Chapters 11-16)
 
 | Block | Chapters | Focus | Challenge Type |
 |-------|----------|-------|---------------|
-| **Block 1** | 10-11 | VS Code setup and Git source control | Comment-based (Ch 10), PR-based (Ch 11) |
+| **Block 1** | 11 | Git source control | PR-based (Ch 11) |
 | **Block 2** | 12-13 | GitHub PR extension and Copilot | Comment-based |
 | **Block 3** | 14-16 | Code review, issue templates, accessibility agents | Comment-based (Ch 14), PR-based (Ch 15), comment-based (Ch 16) |
 
@@ -49,14 +49,14 @@ Every chapter follows the same gold-standard structure:
 
 | Path | How It Works | Chapters |
 |------|-------------|----------|
-| **Comment-based** | Complete tasks, post structured evidence comment on your assigned challenge issue, close the issue | 4, 7, 8, 9, 10, 12, 13, 14, 16 |
-| **PR-based** | Create a branch, edit files, open a PR with `Closes #XX`, pass bot validation checks | 5, 6, 11, 15 |
+| **Comment-based** | Complete tasks, post structured evidence comment on your assigned challenge issue, close the issue | 4, 5, 8, 9, 10, 12, 13, 14, 16 |
+| **PR-based** | Create a branch, edit files, open a PR with `Closes #XX`, pass bot validation checks | 6, 7, 11, 15 |
 
 ### Branch Naming Conventions
 
 | Chapter Range | Branch Pattern | Example |
 |--------------|---------------|---------|
-| Ch 5-6 | `fix/yourname-issueXX` | `fix/maria-issue42` |
+| Ch 7-7 | `fix/yourname-issueXX` | `fix/maria-issue42` |
 | Ch 11 | `chapter11/yourname-issueXX` | `chapter11/maria-issue55` |
 | Ch 15 | `templates/yourname-issueXX` | `templates/maria-issue70` |
 | Ch 16 (optional) | `agents/yourname-issueXX` | `agents/maria-issue80` |
@@ -68,9 +68,9 @@ The Learning Room contains three practice files with intentional problems for st
 
 | File | Problems | Used In |
 |------|----------|---------|
-| `docs/welcome.md` | `[TODO]` placeholder sections needing content | Ch 5, 11 |
-| `docs/keyboard-shortcuts.md` | Intentional errors in shortcut tables | Ch 5, 6, 11 |
-| `docs/setup-guide.md` | Broken links and incomplete setup steps | Ch 5, 11 |
+| `docs/welcome.md` | `[TODO]` placeholder sections needing content | Ch 7, 11 |
+| `docs/keyboard-shortcuts.md` | Intentional errors in shortcut tables | Ch 7, 7, 11 |
+| `docs/setup-guide.md` | Broken links and incomplete setup steps | Ch 7, 11 |
 
 
 ## Skill Building Order
@@ -82,17 +82,17 @@ Ch 0-3: Setup and Navigation (no challenges - orientation only)
    |
 Ch 4: Issues (comment-based) - create, @mention, sub-issues
    |
-Ch 5: Pull Requests (PR-based) - branch, edit, PR, bot checks
+Ch 6: VS Code Accessibility (comment-based) - setup, accessibility mode
    |
-Ch 6: Merge Conflicts (PR-based) - conflict markers, resolution
+Ch 7: Pull Requests (PR-based) - branch, edit, PR, bot checks
    |
-Ch 7: Culture (reflection) - communication, etiquette
+Ch 8: Merge Conflicts (PR-based) - conflict markers, resolution
    |
-Ch 8: Labels/Milestones (comment-based) - triage, organization
+Ch 9: Culture (reflection) - communication, etiquette
    |
-Ch 9: Notifications (comment-based) - inbox management
+Ch 10: Labels/Milestones (comment-based) - triage, organization
    |
-Ch 10: VS Code Basics (comment-based) - setup, accessibility mode
+Ch 5: Notifications (comment-based) - inbox management
    |
 Ch 11: Git Source Control (PR-based) - clone, commit, push
    |

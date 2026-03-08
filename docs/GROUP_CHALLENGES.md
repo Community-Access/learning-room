@@ -9,7 +9,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 3. **Review each other's contributions** within the group
 4. **Complete as a team** - everyone contributes meaningfully
 
----
 
 ## Available Group Challenges
 
@@ -44,7 +43,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Coordinated review process
 - Consistent style across contributors
 
----
 
 ### 2. Peer Review Circle
 **Difficulty:** Intermediate  
@@ -79,7 +77,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Time management in review
 - Identifying patterns across PRs
 
----
 
 ### 3. Accessibility Workshop
 **Difficulty:** Intermediate-Advanced  
@@ -118,7 +115,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Comprehensive accessibility understanding
 - Practical application of multiple concepts
 
----
 
 ### 4. Challenge Creation Sprint
 **Difficulty:** Advanced-Expert  
@@ -151,7 +147,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Appropriate scoping
 - Creating evaluation criteria
 
----
 
 ### 5. Full Repository Audit
 **Difficulty:** Advanced-Expert  
@@ -161,9 +156,9 @@ Collaborative exercises designed for study groups to work on together. These cha
 **Objective:** Conduct comprehensive accessibility audit of entire workshop repository.
 
 **Division of Labor:**
-- **Person A:** Chapters 1-5
-- **Person B:** Chapters 6-10
-- **Person C:** Chapters 11-15 & Appendices
+- **Person A:** Chapters 1-6
+- **Person B:** Chapters 7-10
+- **Person C:** Chapters 11-16 & Appendices
 - **Person D:** Learning-room and meta docs
 - **Everyone:** Cross-check each other's findings
 
@@ -190,7 +185,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Large-scale project organization
 - Professional accessibility workflow
 
----
 
 ### 6. Mentor Chain
 **Difficulty:** All levels  
@@ -225,7 +219,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Explaining concepts at different levels
 - Value of mentorship culture
 
----
 
 ### 7. Accessible Onboarding Flow
 **Difficulty:** Advanced-Expert  
@@ -267,7 +260,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - User testing methodology
 - Empathy for different learning styles
 
----
 
 ## Group Challenge Tips
 
@@ -328,7 +320,6 @@ Collaborative exercises designed for study groups to work on together. These cha
 - Share tips with other groups
 - Suggest improvements to the challenge
 
----
 
 ## Group Challenge Badges
 
@@ -338,7 +329,6 @@ Complete group challenges to earn special badges:
 - **Collaborator**: Completed 3 group challenges
 - **Community Leader**: Completed 5+ group challenges
 
----
 
 ## When Groups Get Stuck
 
@@ -373,7 +363,6 @@ Complete group challenges to earn special badges:
 - Request additional time if needed
 - Ask for scope adjustment if too ambitious
 
----
 
 ## Creating Custom Group Challenges
 
@@ -391,7 +380,6 @@ Have an idea for a group challenge?
 
 Facilitators will review and may add it to the list!
 
----
 
 ## Benefits of Group Challenges
 
@@ -413,7 +401,6 @@ Facilitators will review and may add it to the list!
 - Learn conflict resolution
 - Build portfolio of collaborative work
 
----
 
 ## Resources
 
@@ -422,6 +409,5 @@ Facilitators will review and may add it to the list!
 - [Merge Conflicts](../../docs/06-merge-conflicts.md) - Handling conflicts
 - [Automation Guide](../AUTOMATION.md) - How bot supports group work
 
----
 
 *Group challenges designed to build collaboration skills and community connections. We learn better together!*

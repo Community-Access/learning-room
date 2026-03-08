@@ -267,7 +267,7 @@ Find and fix the broken internal link in `learning-room/docs/welcome.md`.
 
 **Resources:**
 - [Markdown Guide: Links](https://www.markdownguide.org/basic-syntax/#links)
-- [Workshop: Working with PRs](../../docs/05-working-with-pull-requests.md)
+- [Workshop: Working with PRs](../../docs/06-working-with-pull-requests.md)
 ```
 
 ### 4.2 Add Learning Files

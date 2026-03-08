@@ -9,7 +9,7 @@ This document is your **single source of truth** for all workshop challenges. It
 2. Look for issues titled `Chapter X.Y: [Challenge Name] (@YOUR_USERNAME)`
 3. Click to open YOUR issue
 4. Follow the steps in the issue description and this hub
-5. Complete the challenge: **comment on the issue** (Chapters 4, 7-10, 12-14, 16) or **open a PR** (Chapters 5, 6, 11, 15)
+5. Complete the challenge: **comment on the issue** (Chapters 4-5, 8-10, 12-14, 16) or **open a PR** (Chapters 6, 7, 11, 15)
 6. Close the issue when done - you've leveled up!
 
 
@@ -36,7 +36,7 @@ Are you managing this workshop? See [FACILITATOR_CHALLENGES.md](../../FACILITATO
 Chapter 4.1: Create Your First Issue (@yourname)
 Chapter 4.2: Comment and @Mention (@yourname)
 Chapter 4.3: Add a Sub-Issue (@yourname)
-Chapter 5.1: Create One Small Branch Change (@yourname)
+Chapter 6.1: Create One Small Branch Change (@yourname)
 ```
 
 ### Method 2: Use Advanced Search
@@ -66,7 +66,7 @@ No branches, no PRs, no file editing. Your work happens entirely in issue thread
 4. CLOSE     → Close the issue when done
 ```
 
-### PR-Based Challenges (Chapters 5, 6, 11, 15)
+### PR-Based Challenges (Chapters 6, 7, 11, 15)
 
 You edit a file, create a branch, and open a pull request that references the issue.
 
@@ -75,7 +75,7 @@ You edit a file, create a branch, and open a pull request that references the is
 2. BRANCH    → Create a branch (naming convention below)
 3. EDIT      → Make the change described in the issue
 4. PR        → Open a PR with "Closes #XX" in the body
-5. VALIDATE  → Bot checks your work (Chapters 5, 6, 11)
+5. VALIDATE  → Bot checks your work (Chapters 6, 7, 11)
 6. FIX       → If bot finds issues, fix and push again
 7. MERGE     → When checks pass, merge your PR
 8. COMPLETE  → Issue auto-closes!
@@ -86,14 +86,15 @@ You edit a file, create a branch, and open a pull request that references the is
 | Chapter | Branch name pattern | Example |
 |---------|--------------------|---------|
 | Chapter 4 | No branch needed | Work happens in issue threads |
-| Chapters 5-6 | `fix/yourname-issueXX` | `fix/maria-issue42` |
-| Chapters 7-10 | No branch needed | Work happens in issue threads |
+| Chapter 5 | No branch needed | Work happens in issue threads |
+| Chapters 6-7 | `fix/yourname-issueXX` | `fix/maria-issue42` |
+| Chapters 8-10 | No branch needed | Work happens in issue threads |
 | Chapter 11 | `chapter11/yourname-issueXX` | `chapter11/maria-issue55` |
 | Chapters 12-14 | No branch needed | Work happens in issue threads |
 | Chapter 15 | `templates/yourname-issueXX` | `templates/maria-issue60` |
 | Chapter 16 | No branch needed (optional: `agents/yourname-issueXX`) | `agents/maria-issue65` |
 
-> **What about your `username-practice` branch?** That branch was created for you in Chapter 3. It becomes useful starting in Chapter 11 when you work locally with Git and VS Code. For Chapters 5-6, use short-lived `fix/` branches instead.
+> **What about your `username-practice` branch?** That branch was created for you in Chapter 3. It becomes useful starting in Chapter 11 when you work locally with Git and VS Code. For Chapters 6-7, use short-lived `fix/` branches instead.
 
 
 ##  Chapter Challenge Map (Chapters 2-16)
@@ -114,12 +115,12 @@ Use this map for a consistent student experience: safe start, small actions, vis
 | Chapter 2: Navigating Repositories | Orientation only | 0 | Readiness check with facilitator | None |
 | Chapter 3: The Learning Room | System orientation only | 0 | Can explain issue -> branch -> PR flow | None |
 | Chapter 4: Working with Issues | Micro issue challenges (no branch needed) | 3 | Issue creation + @mention comment + sub-issue | Manual/facilitator |
-| Chapter 5: Working with Pull Requests | Bot-validated PR challenges (first branch + file edit) | 3 | Linked PR (`Closes #XX`) + passing checks | PR bot validation |
-| Chapter 6: Merge Conflicts | Controlled single drill | 1 | Issue-linked PR resolving conflict markers | Manual by default |
-| Chapter 7: Culture and Etiquette | Guided reflection | 1 optional | Structured reflection comment | None |
-| Chapter 8: Labels/Milestones/Projects | Guided triage recommendation | 1 | Triage recommendation comment (or apply labels if permitted) | None by default |
-| Chapter 9: Notifications | Guided setup walkthrough | 1 | Completion comment checklist | None |
-| Chapter 10: VS Code Basics | Guided setup baseline | 1 | Completion comment checklist | None |
+| Chapter 5: VS Code Accessibility | Guided setup baseline | 1 | Completion comment checklist | None |
+| Chapter 6: Working with Pull Requests | Bot-validated PR challenges (first branch + file edit) | 3 | Linked PR (`Closes #XX`) + passing checks | PR bot validation |
+| Chapter 7: Merge Conflicts | Controlled single drill | 1 | Issue-linked PR resolving conflict markers | Manual by default |
+| Chapter 8: Culture and Etiquette | Guided reflection | 1 optional | Structured reflection comment | None |
+| Chapter 9: Labels/Milestones/Projects | Guided triage recommendation | 1 | Triage recommendation comment (or apply labels if permitted) | None by default |
+| Chapter 10: Notifications | Guided setup walkthrough | 1 | Completion comment checklist | None |
 | Chapter 11: Git & Source Control | Bot-validated local Git challenges | 3 | Commits + branch + PR with `Closes #XX` | PR bot validation |
 | Chapter 12: GitHub PR Extension | Guided PR extension setup | 2 | Issue comment with checklist | None |
 | Chapter 13: GitHub Copilot | Guided AI-assisted writing | 3 | Issue comment with action checklist | None |
@@ -143,7 +144,7 @@ Students can expand any chapter below to see the complete challenge instructions
 <details>
 <summary><strong>Chapter 4: Working with Issues</strong> - 3 Micro-Challenges</summary>
 
-> **Branch guidance:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.
+> **Branch guidance:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 6.
 
 ### Challenge Set
 
@@ -184,7 +185,7 @@ Students can expand any chapter below to see the complete challenge instructions
    - "@classmate I'd suggest adding the paragraph right after the 'Who Can Contribute' heading."
 7. Activate the **Comment** button (or press `Ctrl+Enter`).
 
-**Why @mentions matter:** When you type `@username`, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 9 (Notifications) where you will configure how you receive these alerts.
+**Why @mentions matter:** When you type `@username`, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 10 (Notifications) where you will configure how you receive these alerts.
 
 **You are done when:** Your comment appears in the thread and includes an @mention (the username will render as a clickable link).
 
@@ -237,8 +238,57 @@ Issues are collaborative spaces, not just task lists. An @mention tells someone 
 
 </details>
 
+
 <details>
-<summary><strong>Chapter 5: Working with Pull Requests</strong> - 3 PR-Validated Challenges</summary>
+<summary><strong>Chapter 5: VS Code Accessibility</strong> - Guided VS Code Accessibility Baseline (No Bot Check)</summary>
+
+### Goal
+
+Confirm students can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.
+
+### Student Steps
+
+1. Open any repository and launch github.dev with `.` (period key).
+2. Screen reader mode setup:
+   - Windows (NVDA/JAWS): enable with `Shift+Alt+F1`.
+   - Mac (VoiceOver): mode is usually already optimized. If needed, run Command Palette and search `Toggle Screen Reader Accessibility Mode`.
+3. Open Explorer with `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`).
+4. Open `README.md` from the file tree.
+5. Open outline/symbols with `Ctrl+Shift+O` (Mac: `Cmd+Shift+O`).
+6. Open Command Palette with `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) and run any command.
+7. Return to your assigned challenge issue and post a completion comment using this format:
+
+```text
+Chapter 5 complete:
+- Opened github.dev: yes
+- Screen reader mode enabled: yes
+- Opened file in Explorer: yes
+- Opened outline/symbols: yes
+- Opened Command Palette: yes
+```
+
+### Expected Outcomes
+
+- Student can launch and navigate github.dev or desktop VS Code.
+- Student can enable screen reader mode and open core navigation surfaces.
+- Student is ready for VS Code-based contribution chapters.
+
+### If You Get Stuck
+
+1. Confirm you are in a repository page before pressing `.`.
+2. Retry screen reader mode toggle once, then verify in settings.
+3. On Mac with VoiceOver, use Command Palette (`Cmd+Shift+P`) and run `Toggle Screen Reader Accessibility Mode` if keyboard navigation feels inconsistent.
+4. Use Command Palette to run commands when shortcut memory is hard.
+5. Ask facilitator for a side-by-side demo and repeat the same 5 steps.
+
+### Learning Moment
+
+Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality.
+
+</details>
+
+<details>
+<summary><strong>Chapter 6: Working with Pull Requests</strong> - 3 PR-Validated Challenges</summary>
 
 > **Branch guidance:** This is the first chapter where you edit files and create branches.
 >
@@ -252,11 +302,11 @@ Issues are collaborative spaces, not just task lists. An @mention tells someone 
 2. **Open a linked PR** - use the PR template and include `Closes #XX`.
 3. **Pass required checks** - respond to bot feedback until all required checks pass.
 
-### Challenge 5.1: Create One Small Branch Change
+### Challenge 6.1: Create One Small Branch Change
 
 **Goal:** Edit one of the practice files and save your change on a new branch.
 
-Open your **assigned Chapter 5.1 challenge issue** (the one titled "Chapter 5.1: Create One Small Branch Change (@yourname)"). The issue description tells you which file to edit and what to fix.
+Open your **assigned Chapter 6.1 challenge issue** (the one titled "Chapter 6.1: Create One Small Branch Change (@yourname)"). The issue description tells you which file to edit and what to fix.
 
 The Learning Room has three practice files with intentional problems. Your assigned issue points you to one of them:
 
@@ -276,14 +326,14 @@ The Learning Room has three practice files with intentional problems. Your assig
 6. Select **Create a new branch for this commit and start a pull request**.
 7. Activate **Propose changes**.
 
-### Challenge 5.2: Open a Linked PR
+### Challenge 6.2: Open a Linked PR
 
 1. On the "Open a pull request" page, write a descriptive title.
-2. In the body, include a summary of your change (at least 50 characters) and the line `Closes #XX` (where XX is your Chapter 5 challenge issue number).
+2. In the body, include a summary of your change (at least 50 characters) and the line `Closes #XX` (where XX is your Chapter 6 challenge issue number).
 3. Verify the base branch is `main` and the compare branch is your `fix/` branch.
 4. Activate **Create pull request**.
 
-### Challenge 5.3: Pass Required Checks
+### Challenge 6.3: Pass Required Checks
 
 1. Wait about 30 seconds. The bot posts a validation comment.
 2. Read the bot feedback. It checks: issue reference, description length, file location, and accessibility.
@@ -311,7 +361,7 @@ A great PR is small, linked to an issue, and easy to review. Faster feedback bui
 </details>
 
 <details>
-<summary><strong>Chapter 6: Merge Conflicts</strong> - 1 Controlled Conflict Drill</summary>
+<summary><strong>Chapter 7: Merge Conflicts</strong> - 1 Controlled Conflict Drill</summary>
 
 ### Challenge: Resolve Conflict Markers
 
@@ -342,14 +392,14 @@ Merge conflicts are not failures. They are a normal collaboration checkpoint and
 </details>
 
 <details>
-<summary><strong>Chapter 7: Culture and Etiquette</strong> - Optional Guided Reflection</summary>
+<summary><strong>Chapter 8: Culture and Etiquette</strong> - Optional Guided Reflection</summary>
 
 ### Optional Guided Reflection (Issue Comment Evidence)
 
 Students can post one short comment on their assigned issue:
 
 ```text
-Chapter 7 reflection:
+Chapter 8 reflection:
 - One respectful review habit I will use:
 - One way I will ask for help clearly:
 - One way I will respond to feedback constructively:
@@ -379,7 +429,7 @@ Technical quality and communication quality work together. Respectful, clear com
 </details>
 
 <details>
-<summary><strong>Chapter 8: Labels, Milestones, and Projects</strong> - 1 Guided Triage Recommendation</summary>
+<summary><strong>Chapter 9: Labels, Milestones, and Projects</strong> - 1 Guided Triage Recommendation</summary>
 
 ### Challenge: Triage Recommendation Comment
 
@@ -390,7 +440,7 @@ Technical quality and communication quality work together. Respectful, clear com
 3. Post a triage recommendation comment using this format:
 
 ```text
-Chapter 8 triage recommendation:
+Chapter 9 triage recommendation:
 - Suggested labels:
 - Suggested milestone:
 - Suggested project board column:
@@ -421,7 +471,7 @@ Triage is about clarity, not authority. Good recommendations reduce maintainer e
 </details>
 
 <details>
-<summary><strong>Chapter 9: Notifications</strong> - Guided Setup Walkthrough (No Bot Check)</summary>
+<summary><strong>Chapter 10: Notifications</strong> - Guided Setup Walkthrough (No Bot Check)</summary>
 
 ### Goal
 
@@ -459,53 +509,6 @@ Notification management protects focus. You can stay responsive without drowning
 
 </details>
 
-<details>
-<summary><strong>Chapter 10: VS Code Basics</strong> - Guided VS Code Accessibility Baseline (No Bot Check)</summary>
-
-### Goal
-
-Confirm students can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.
-
-### Student Steps
-
-1. Open any repository and launch github.dev with `.` (period key).
-2. Screen reader mode setup:
-   - Windows (NVDA/JAWS): enable with `Shift+Alt+F1`.
-   - Mac (VoiceOver): mode is usually already optimized. If needed, run Command Palette and search `Toggle Screen Reader Accessibility Mode`.
-3. Open Explorer with `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`).
-4. Open `README.md` from the file tree.
-5. Open outline/symbols with `Ctrl+Shift+O` (Mac: `Cmd+Shift+O`).
-6. Open Command Palette with `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) and run any command.
-7. Return to your assigned challenge issue and post a completion comment using this format:
-
-```text
-Chapter 10 complete:
-- Opened github.dev: yes
-- Screen reader mode enabled: yes
-- Opened file in Explorer: yes
-- Opened outline/symbols: yes
-- Opened Command Palette: yes
-```
-
-### Expected Outcomes
-
-- Student can launch and navigate github.dev or desktop VS Code.
-- Student can enable screen reader mode and open core navigation surfaces.
-- Student is ready for VS Code-based contribution chapters.
-
-### If You Get Stuck
-
-1. Confirm you are in a repository page before pressing `.`.
-2. Retry screen reader mode toggle once, then verify in settings.
-3. On Mac with VoiceOver, use Command Palette (`Cmd+Shift+P`) and run `Toggle Screen Reader Accessibility Mode` if keyboard navigation feels inconsistent.
-4. Use Command Palette to run commands when shortcut memory is hard.
-5. Ask facilitator for a side-by-side demo and repeat the same 5 steps.
-
-### Learning Moment
-
-Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality.
-
-</details>
 
 <details>
 <summary><strong>Chapter 11: Git & Source Control in VS Code</strong> - 3 Bot-Validated Local Git Challenges</summary>
@@ -514,7 +517,7 @@ Tool setup is part of contribution skill. A stable, accessible editor reduces st
 
 **Estimated time:** 20-30 minutes
 
-**Prerequisite checkpoint:** Complete Chapter 10 first so VS Code navigation and accessibility settings are already stable.
+**Prerequisite checkpoint:** Complete Chapter 5 first so VS Code navigation and accessibility settings are already stable.
 
 1. **Clone the sci-fi themes repository**
    - Clone `https://github.com/community-access/vscode-sci-fi-themes.git` to your local machine using VS Code.
@@ -728,7 +731,7 @@ The best template is one you've already used. By remixing the registration templ
 If 55 agents feels too broad, start with this sequence:
 1. `@daily-briefing` (maps to repository navigation and issue awareness)
 2. `@issue-tracker` (maps to Chapter 4 issue workflow)
-3. `@pr-review` (maps to Chapter 5 and Chapter 14 review skills)
+3. `@pr-review` (maps to Chapter 6 and Chapter 14 review skills)
 
 Once these feel comfortable, expand to specialist agents.
 
@@ -844,5 +847,5 @@ These challenges require collaboration with your study group:
 
 ### Resources
 - [Automation Guide](../AUTOMATION.md) - Understanding bot feedback
-- [PR Workflow](../../docs/05-working-with-pull-requests.md) - Step-by-step PR process
+- [PR Workflow](../../docs/06-working-with-pull-requests.md) - Step-by-step PR process
 - [Accessibility Guide](../../docs/14-accessible-code-review.md) - Accessibility principles
