@@ -10,7 +10,7 @@ This document is your **single source of truth** for all workshop challenges. It
 3. Click to open YOUR issue
 4. Follow the steps in the issue description and this hub
 5. Complete the challenge: **comment on the issue** (Chapters 4-5, 8-10, 12-14, 16) or **open a PR** (Chapters 6, 7, 11, 15)
-6. Close the issue when done - you've leveled up!
+6. Close the issue when done - you've leveled up and have earned a really awesome virtual trophy. Sadly, it's only virtual, but it's still something you should be incredibly proud of.
 
 
 ### Facilitators and Admins
