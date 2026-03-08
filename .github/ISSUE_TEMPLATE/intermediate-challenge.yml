@@ -1,0 +1,61 @@
+name: Intermediate Challenge
+description: Claim an intermediate-level challenge (1+ merged PRs required)
+title: "[Intermediate] "
+labels: ["challenge: intermediate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Intermediate Challenge
+
+        Intermediate challenges focus on accessibility skills and build on what you learned in beginner challenges.
+
+        **Before starting:** We recommend completing the [Communicate Using Markdown](https://github.com/skills/communicate-using-markdown) Skills module. It covers headings, links, images, and tables, which are key to these challenges.
+
+  - type: dropdown
+    id: challenge
+    attributes:
+      label: Which challenge are you working on?
+      options:
+        - "Challenge 4: Fix Heading Hierarchy"
+        - "Challenge 5: Improve Link Text"
+        - "Challenge 6: Add Alt Text"
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Which file(s) will you edit?
+      description: "List all files you plan to change"
+      placeholder: "docs/welcome.md, docs/setup-guide.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: What do you plan to change?
+      description: Describe each change and why it improves accessibility.
+      placeholder: "In setup-guide.md, the heading on line 15 skips from H1 to H3. I will add the missing H2..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills-reflection
+    attributes:
+      label: Skills module connection (optional)
+      description: If you completed the Communicate Using Markdown Skills module, share one thing you learned that applies to this challenge.
+      placeholder: "I learned that heading hierarchy matters for screen reader navigation because..."
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Before you begin
+      options:
+        - label: I have at least 1 merged PR in this repository
+          required: true
+        - label: I have read the challenge description in [CHALLENGES.md](../docs/CHALLENGES.md)
+          required: true
+        - label: I understand why this accessibility issue matters for screen reader users
+          required: true

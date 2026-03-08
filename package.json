@@ -1,0 +1,23 @@
+{
+  "name": "learning-room",
+  "version": "1.0.0",
+  "description": "Learning Room for Git Going with GitHub Workshop - Shared practice space for students",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Tests run via GitHub Actions\"",
+    "validate": "echo \"Validation runs via GitHub Actions workflows\""
+  },
+  "keywords": [
+    "git",
+    "github",
+    "learning",
+    "workshop",
+    "open-source",
+    "accessibility"
+  ],
+  "author": "Community Access",
+  "license": "CC-BY-4.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

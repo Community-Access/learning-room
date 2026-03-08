@@ -1,0 +1,226 @@
+name: Skills Progression Tracker
+# Tracks student progress, unlocks challenges, awards badges
+# Runs when PRs are merged to celebrate achievements and motivate learning
+
+on:
+  pull_request:
+    types: [closed]
+  issues:
+    types: [closed]
+  workflow_dispatch:
+    inputs:
+      student_username:
+        description: 'Student GitHub username'
+        required: false
+      action:
+        description: 'Action (check_progress, assign_next, reset)'
+        required: false
+        default: 'check_progress'
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  track-completion:
+    name: Award Badge & Track Progress
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Award achievement badge
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              if (!context.payload.pull_request) {
+                console.log('Skipping achievement on non-PR event');
+                return;
+              }
+
+              const student = context.payload.pull_request.user.login;
+              const prNumber = context.payload.pull_request.number;
+              const prBody = context.payload.pull_request.body || '';
+              
+              // Extract linked issue
+              const issueMatch = prBody.match(/(?:close|closes|fix|fixes|resolve|resolves)\s+#(\d+)/i);
+              
+              if (!issueMatch) {
+                console.log('No linked issue found in PR');
+                return;
+              }
+              
+              const issueNumber = parseInt(issueMatch[1]);
+              
+              // Fetch issue to determine challenge type
+              const { data: issue } = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber
+              });
+              
+              // Determine skill from labels
+              const labels = issue.labels.map(l => typeof l === 'string' ? l : l.name);
+              let skillType = 'general-contribution';
+              let badgeName = 'Contributor';
+              let skillDescription = 'You made a meaningful contribution!';
+              
+              if (labels.includes('skill: markdown')) {
+                skillType = 'markdown-master';
+                badgeName = '📝 Markdown Master';
+                skillDescription = 'You mastered proper markdown syntax and document structure!';
+              } else if (labels.includes('skill: accessibility')) {
+                skillType = 'accessibility-advocate';
+                badgeName = '♿ Accessibility Advocate';
+                skillDescription = 'You made content more accessible for everyone!';
+              } else if (labels.includes('skill: review')) {
+                skillType = 'code-reviewer';
+                badgeName = '👀 Code Reviewer';
+                skillDescription = 'You provided constructive, helpful feedback!';
+              } else if (labels.includes('skill: collaboration')) {
+                skillType = 'team-player';
+                badgeName = '🤝 Team Player';
+                skillDescription = 'You collaborated effectively with your peers!';
+              }
+              
+              // Build achievement comment
+              const achievementBody = [
+                '## Achievement Unlocked! 🏆',
+                '',
+                `**${badgeName}** — ${skillDescription}`,
+                '',
+                '### How You Got This',
+                '',
+                `Merged PR #${prNumber} (closes #${issueNumber})`,
+                '',
+                `Challenge: ${issue.title}`,
+                '',
+                '### What\'s Next?',
+                '',
+                '✅ Check your [Learning Path](../docs/LEARNING_PATHS.md) for the next challenge',
+                '📖 Review available [Challenges](docs/CHALLENGES.md)',
+                '💬 Comment if you want to claim the next issue',
+                '',
+                '**Keep going! You\'re building real open source experience.** 🚀',
+                '',
+                '---',
+                '*Progress tracked by the Learning Room Skills Engine*'
+              ].join('\n');
+
+              // Post achievement comment on the merged PR
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: achievementBody
+              });
+              
+              // Close the linked issue with a celebration comment
+              const issueClosingComment = [
+                `## Issue Resolved ✅`,
+                '',
+                `Great work @${student}! Your PR #${prNumber} has been merged.`,
+                '',
+                'Next steps:',
+                '1. Celebrate your achievement! 🎉',
+                '2. Check the [Learning Paths](../docs/LEARNING_PATHS.md) for your next challenge',
+                '3. Claim the next issue with a comment'
+              ].join('\n');
+              
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                body: issueClosingComment
+              });
+              
+              // Add achievement label to PR
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  labels: [`achievement: ${skillType}`]
+                });
+              } catch (labelError) {
+                console.log('Could not add label:', labelError.message);
+              }
+              
+            } catch (error) {
+              console.error('Error awarding achievement:', error);
+            }
+
+  unlock-next-challenge:
+    name: Check for Next Challenge
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Find next available challenge
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const student = context.payload.pull_request.user.login;
+              
+              // Get all open issues unassigned or not yet claimed by this student
+              const { data: openChallenges } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'challenge'
+              });
+              
+              if (openChallenges.length === 0) {
+                console.log('No more challenges available');
+                return;
+              }
+              
+              // Find first challenge not assigned to this student
+              const nextChallenge = openChallenges.find(issue => {
+                const assignees = (issue.assignees || []).map(a => a.login);
+                return !assignees.includes(student);
+              });
+              
+              if (nextChallenge) {
+                const suggestionComment = [
+                  `Hi @${student}! 👋`,
+                  '',
+                  'Congratulations on completing your last challenge! **You\'re on a roll!** 🎉',
+                  '',
+                  `### Next Challenge Available:`,
+                  `[${nextChallenge.title}](${nextChallenge.html_url})`,
+                  '',
+                  'Would you like to claim it? Comment below with:',
+                  '> I\'d like to work on this challenge!',
+                  '',
+                  'Questions? Ask in the issue comments - that\'s what they\'re for!',
+                  '',
+                  '---',
+                  '*Learning Room Skills Engine*'
+                ].join('\n');
+                
+                // Post suggestion as reply in the PR
+                // (This helps students see the next challenge right away)
+                console.log('Next challenge found:', nextChallenge.number);
+              }
+            } catch (error) {
+              console.error('Error finding next challenge:', error);
+            }

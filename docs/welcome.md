@@ -23,9 +23,6 @@ You do not need to be a professional developer to contribute. Documentation, acc
 
 [TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
 
-Anyone who writes code can contribute to open source. Contributors come from all walks of life and have all levels of skill. Some develop as their day job, others as a hobby and still other are just starting out on their journey of learning and developing code.
-Those who use AT bring a wealth of knowledge as they know many pain points of where their AT just doesn't work. They can be just as if not more successful than developers who do not use AT. They can assist those developers who aren't aware of or do not know accessibility in learning about its importance.
-
 ---
 
 ## What Makes a Good First Contribution?
@@ -50,8 +47,6 @@ Most open source projects label issues that are suitable for new contributors. L
 
 [TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
 
-Determine do you have the skills needed and the time to commit to taking it on? Intent is great, but code and troubleshooting/testing takes time. To read an issue go to the reponame/issues then locate and open the issue and read through what the problem is, what the expected result should be etc.
-
 ---
 
 ## Getting Help
@@ -74,8 +69,6 @@ When your pull request is merged:
 
 [TODO: Add a sentence or two about what this means for someone's GitHub profile and open source portfolio.]
 
-When you code is merged into a larger github repo that's somethign for your devloper resume. Its says I helped develop this. The more contributions you make, the more that resume grows and the more respect and renound you become in the open source community.
-
 ---
 
-\*Last reviewed: 03-7-26
+*Last reviewed: [DATE]*
