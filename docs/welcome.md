@@ -71,4 +71,4 @@ When your pull request is merged:
 
 ---
 
-    *Last reviewed: [March 8, 2026]*
+*Last reviewed: March 8, 2026*
