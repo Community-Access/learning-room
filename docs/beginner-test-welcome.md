@@ -4,7 +4,7 @@ Welcome to our collaborative learning space! This guide will help you get starte
 
 ## Getting Started
 
-Before you begin, please review [the setup guide](./docs/setup.md) for detailed instructions.
+Before you begin, please review [the setup guide](./setup.md) for detailed instructions.
 
 ## Quick Links
 
