@@ -1,5 +1,790 @@
 {
-  "accessibility": [],
+  "accessibility": [
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 86,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 87,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 88,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 89,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 90,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 91,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 92,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 93,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 94,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 95,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 113,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 114,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 115,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 116,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 117,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 118,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 119,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 120,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 121,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 122,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 123,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 124,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 125,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 126,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 127,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 128,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 129,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 313,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 314,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 315,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 316,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/CHALLENGES.md",
+      "line": 317,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 16,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 17,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 18,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 19,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 20,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 21,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 22,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 23,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 24,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 25,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 26,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 27,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 31,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 32,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 33,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 34,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 38,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 39,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 40,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 41,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 42,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 52,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 53,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 54,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 55,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 56,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 57,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 58,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 59,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 60,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 61,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 62,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 66,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 67,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 68,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 69,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 70,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 74,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 75,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 76,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 77,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 78,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 96,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 97,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 98,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 99,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 100,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 101,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 102,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 103,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 104,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 105,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 115,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 116,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 117,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 118,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 119,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 120,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 124,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 125,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 126,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 127,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 128,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 129,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 130,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    },
+    {
+      "file": "docs/keyboard-shortcuts.md",
+      "line": 131,
+      "type": "suggestion",
+      "title": "Table Description",
+      "message": "Consider adding a brief description before tables explaining their content.",
+      "fix": "Add one sentence before the table explaining what data it contains."
+    }
+  ],
   "errors": [],
   "warnings": []
 }
