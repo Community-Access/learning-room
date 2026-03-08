@@ -27,4 +27,4 @@ Here's how to make your first pull request:
 
 For more information, [click here to read the full guide](./docs/complete-guide.md).
 
-Good luck! We're excited to have you here.
+Good luck! We're really really very completely excited to have you here.
