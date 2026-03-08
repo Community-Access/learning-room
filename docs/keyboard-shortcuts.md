@@ -145,3 +145,6 @@ GitHub issue list filtering updates via JavaScript. If VoiceOver does not announ
 
 **The diff table in Files Changed is hard to read:**
 The improved Files Changed experience has been broadly rolled out and is likely already active for your account. If you are experiencing issues with diff navigation or missing landmarks, verify using your screen reader: activate the **User Menu** button → **"Feature preview"** → look for **"New Files Changed Experience"**. If it appears, the toggle announces **"Pressed"** when enabled - activate it if not. If it no longer appears in the Feature Preview list, it has graduated to the standard interface and is active automatically.
+
+I modified this document at 2:52 PM on March 8, 2026.
+
