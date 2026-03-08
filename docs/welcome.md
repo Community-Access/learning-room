@@ -53,7 +53,7 @@ Most open source projects label issues that are suitable for new contributors. L
 
 It is always acceptable to ask a question on an issue or pull request. Good questions:
 
-- Are specific: "I'm trying to fix the broken link on line 24 of [setup-guide.md](setup-guide.md). The link currently points to /docs/old-setup. Where should it point?"
+- Are specific: "I'm trying to fix the broken link on line 24 of [setup-guide.md](./setup-guide.md). The link currently points to /docs/old-setup. Where should it point?"
 - Show what you tried: "I searched the repository for the correct URL but couldn't find it"
 - Are polite: assume good intent from maintainers, even if they are slow to respond
 
