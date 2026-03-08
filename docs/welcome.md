@@ -21,7 +21,7 @@ You do not need to be a professional developer to contribute. Documentation, acc
 
 ## Who Can Contribute?
 
-[TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
+Many people who contribute come from differing skill levels. Github is friendly to everyone including those using assistive technology.
 
 ---
 
@@ -45,7 +45,7 @@ Most open source projects label issues that are suitable for new contributors. L
 - `help wanted`
 - `beginner`
 
-[TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
+If you want to work on an issue you can read through them to decide which to work on. Do you have the skills to fix the issue? Is this issue one you feel you can work on?
 
 ---
 
@@ -67,8 +67,8 @@ When your pull request is merged:
 - The issue you fixed is closed
 - You are officially listed as a contributor to this project
 
-[TODO: Add a sentence or two about what this means for someone's GitHub profile and open source portfolio.]
+If you contribute to a project this helps out your profile because people can see that you are helping out. This looks good on your portfolio because others can see that you are helping out with open source projects.
 
 ---
 
-*Last reviewed: [DATE]*
+*Last reviewed: 03/08/2026*
