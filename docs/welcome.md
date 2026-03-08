@@ -45,7 +45,7 @@ Most open source projects label issues that are suitable for new contributors. L
 - `help wanted`
 - `beginner`
 
-[TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
+[TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it? add in how to look at issues and filter issues]
 
 ---
 
@@ -71,4 +71,4 @@ When your pull request is merged:
 
 ---
 
-*Last reviewed: [DATE]*
+*Last reviewed: [March 8. 2026]*
