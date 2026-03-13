@@ -1,0 +1,1270 @@
+<h1 id="available-challenges">Available Challenges</h1>
+<p>Welcome to the <strong>Challenge Hub</strong> - your guide to
+leveling up your GitHub and accessibility skills!</p>
+<p>This document is your <strong>single source of truth</strong> for all
+workshop challenges. It connects to GitHub issues that are pre-assigned
+to you by your <span class="citation"
+data-cites="username">@username</span>.</p>
+<p><strong>Quick Start:</strong> 1. Go to the <strong>Issues</strong>
+tab of this repository 2. Look for issues titled
+<code>Chapter X.Y: [Challenge Name] (@YOUR_USERNAME)</code> 3. Click to
+open YOUR issue 4. Follow the steps in the issue description and this
+hub 5. Complete the challenge: <strong>comment on the issue</strong>
+(Chapters 4-5, 8-10, 12-14, 16) or <strong>open a PR</strong> (Chapters
+6, 7, 11, 15) 6. Close the issue when done - you’ve leveled up!</p>
+<h3 id="facilitators-and-admins">Facilitators and Admins</h3>
+<p>Are you managing this workshop? See <a
+href="../../FACILITATOR_CHALLENGES.md">FACILITATOR_CHALLENGES.md</a>
+for: - How to generate challenges for a new cohort - Monitoring student
+progress in real time - Understanding bot validation and automation -
+Archiving and refreshing issues between cohorts - Pre-workshop setup
+checklist</p>
+<h2 id="how-to-find-your-challenges">How to Find Your Challenges</h2>
+<h3 id="method-1-github-issues-tab-easiest">Method 1: GitHub Issues Tab
+(Easiest)</h3>
+<ol type="1">
+<li>Click the <strong>Issues</strong> tab at the top of this
+repository</li>
+<li>Your challenges are assigned to you - filter by assignee (click your
+avatar)</li>
+<li>Each issue title shows the chapter and challenge number</li>
+<li>Click any issue to start</li>
+</ol>
+<p><strong>Example:</strong> You’ll see issues like:</p>
+<pre><code>Chapter 4.1: Create Your First Issue (@yourname)
+Chapter 4.2: Comment and @Mention (@yourname)
+Chapter 4.3: Add a Sub-Issue (@yourname)
+Chapter 6.1: Create One Small Branch Change (@yourname)</code></pre>
+<h3 id="method-2-use-advanced-search">Method 2: Use Advanced Search</h3>
+<p>In the GitHub search bar at the top:</p>
+<pre><code>is:issue assignee:@yourname label:challenge</code></pre>
+<p>This shows all challenges assigned to you.</p>
+<h3 id="method-3-this-challenge-hub-below">Method 3: This Challenge Hub
+(Below)</h3>
+<p>Expand any chapter section below to see the full instructions. The
+hub is the <strong>detailed reference</strong> - issues are the
+<strong>lightweight tracker</strong>.</p>
+<h2 id="challenge-lifecycle">Challenge Lifecycle</h2>
+<p>There are two kinds of challenges. The type determines how you
+complete it.</p>
+<h3 id="comment-based-challenges-chapters-4-7-10-12-14-16">Comment-Based
+Challenges (Chapters 4, 7-10, 12-14, 16)</h3>
+<p>No branches, no PRs, no file editing. Your work happens entirely in
+issue threads.</p>
+<pre><code>1. FIND      → Open your assigned issue in the Issues tab
+2. WORK      → Follow the steps in the issue + this hub
+3. COMMENT   → Post your evidence as an issue comment
+4. CLOSE     → Close the issue when done</code></pre>
+<h3 id="pr-based-challenges-chapters-6-7-11-15">PR-Based Challenges
+(Chapters 6, 7, 11, 15)</h3>
+<p>You edit a file, create a branch, and open a pull request that
+references the issue.</p>
+<pre><code>1. FIND      → Open your assigned issue in the Issues tab
+2. BRANCH    → Create a branch (naming convention below)
+3. EDIT      → Make the change described in the issue
+4. PR        → Open a PR with &quot;Closes #XX&quot; in the body
+5. VALIDATE  → Bot checks your work (Chapters 6, 7, 11)
+6. FIX       → If bot finds issues, fix and push again
+7. MERGE     → When checks pass, merge your PR
+8. COMPLETE  → Issue auto-closes!</code></pre>
+<h3 id="branch-naming-convention">Branch Naming Convention</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 52%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Branch name pattern</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chapter 4</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapter 5</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapters 6-7</td>
+<td><code>fix/yourname-issueXX</code></td>
+<td><code>fix/maria-issue42</code></td>
+</tr>
+<tr>
+<td>Chapters 8-10</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapter 11</td>
+<td><code>chapter11/yourname-issueXX</code></td>
+<td><code>chapter11/maria-issue55</code></td>
+</tr>
+<tr>
+<td>Chapters 12-14</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapter 15</td>
+<td><code>templates/yourname-issueXX</code></td>
+<td><code>templates/maria-issue60</code></td>
+</tr>
+<tr>
+<td>Chapter 16</td>
+<td>No branch needed (optional:
+<code>agents/yourname-issueXX</code>)</td>
+<td><code>agents/maria-issue65</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>What about your <code>username-practice</code>
+branch?</strong> That branch was created for you in Chapter 3. It
+becomes useful starting in Chapter 11 when you work locally with Git and
+VS Code. For Chapters 6-7, use short-lived <code>fix/</code> branches
+instead.</p>
+</blockquote>
+<h2 id="chapter-challenge-map-chapters-2-16">Chapter Challenge Map
+(Chapters 2-16)</h2>
+<p>Use this map for a consistent student experience: safe start, small
+actions, visible progress.</p>
+<h3 id="shared-learning-pattern">Shared Learning Pattern</h3>
+<ol type="1">
+<li><strong>Learn:</strong> short chapter walkthrough.</li>
+<li><strong>Practice:</strong> one small, clear action.</li>
+<li><strong>Prove:</strong> leave evidence in issue or PR.</li>
+<li><strong>Celebrate:</strong> close issue and reflect briefly.</li>
+</ol>
+<h3 id="chapter-by-chapter-status">Chapter-by-Chapter Status</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Challenge Model</th>
+<th>Count</th>
+<th>Evidence</th>
+<th>Automation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chapter 2: Navigating Repositories</td>
+<td>Orientation only</td>
+<td>0</td>
+<td>Readiness check with facilitator</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 3: The Learning Room</td>
+<td>System orientation only</td>
+<td>0</td>
+<td>Can explain issue -&gt; branch -&gt; PR flow</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 4: Working with Issues</td>
+<td>Micro issue challenges (no branch needed)</td>
+<td>3</td>
+<td>Issue creation + <span class="citation"
+data-cites="mention">@mention</span> comment + sub-issue</td>
+<td>Manual/facilitator</td>
+</tr>
+<tr>
+<td>Chapter 5: VS Code Accessibility</td>
+<td>Guided setup baseline</td>
+<td>1</td>
+<td>Completion comment checklist</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 6: Working with Pull Requests</td>
+<td>Bot-validated PR challenges (first branch + file edit)</td>
+<td>3</td>
+<td>Linked PR (<code>Closes #XX</code>) + passing checks</td>
+<td>PR bot validation</td>
+</tr>
+<tr>
+<td>Chapter 7: Merge Conflicts</td>
+<td>Controlled single drill</td>
+<td>1</td>
+<td>Issue-linked PR resolving conflict markers</td>
+<td>Manual by default</td>
+</tr>
+<tr>
+<td>Chapter 8: Culture and Etiquette</td>
+<td>Guided reflection</td>
+<td>1 optional</td>
+<td>Structured reflection comment</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 9: Labels/Milestones/Projects</td>
+<td>Guided triage recommendation</td>
+<td>1</td>
+<td>Triage recommendation comment (or apply labels if permitted)</td>
+<td>None by default</td>
+</tr>
+<tr>
+<td>Chapter 10: Notifications</td>
+<td>Guided setup walkthrough</td>
+<td>1</td>
+<td>Completion comment checklist</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 11: Git &amp; Source Control</td>
+<td>Bot-validated local Git challenges</td>
+<td>3</td>
+<td>Commits + branch + PR with <code>Closes #XX</code></td>
+<td>PR bot validation</td>
+</tr>
+<tr>
+<td>Chapter 12: GitHub PR Extension</td>
+<td>Guided PR extension setup</td>
+<td>2</td>
+<td>Issue comment with checklist</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 13: GitHub Copilot</td>
+<td>Guided AI-assisted writing</td>
+<td>3</td>
+<td>Issue comment with action checklist</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 14: Accessible Code Review</td>
+<td>Guided PR review practice</td>
+<td>2</td>
+<td>Issue comment with review summary</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 15: Issue Templates</td>
+<td>Analyze registration template, remix &amp; create</td>
+<td>2-3</td>
+<td>Issue/PR comment with template remixed or created</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 16: Accessibility Agents</td>
+<td>Guided agent exploration + capstone feedback</td>
+<td>3-5 + Capstone</td>
+<td>Issue comment with agent evaluation + feedback form</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confidence-rules">Confidence Rules</h3>
+<ul>
+<li>Keep challenge tasks under 10 minutes.</li>
+<li>Limit scope to one action and one proof artifact.</li>
+<li>Prefer issue comments when automation is not reliable.</li>
+<li>Use PR checks only where technical validation is deterministic.</li>
+<li>In chapter challenge sections, always include: actionable steps,
+expected outcomes, “If You Get Stuck,” and a short learning moment.</li>
+</ul>
+<h2 id="full-challenge-details-expandable-reference">Full Challenge
+Details (Expandable Reference)</h2>
+<p>Students can expand any chapter below to see the complete challenge
+instructions without leaving this hub. Full chapter documentation is
+also available in each chapter file.</p>
+<details>
+<summary>
+<strong>Chapter 4: Working with Issues</strong> - 3 Micro-Challenges
+</summary>
+<blockquote>
+<p><strong>Branch guidance:</strong> Chapter 4 focuses on issue skills.
+You do NOT need to create a branch or edit any files for these
+challenges. All your work happens in GitHub issue threads. File editing
+and branches start in Chapter 6.</p>
+</blockquote>
+<h3 id="challenge-set">Challenge Set</h3>
+<ol type="1">
+<li><strong>Create your first issue</strong> - file a new issue with a
+clear title and description.</li>
+<li><strong>Comment and <span class="citation"
+data-cites="mention">@mention</span></strong> - leave a comment on a
+classmate’s issue and tag them with an <span class="citation"
+data-cites="mention">@mention</span>.</li>
+<li><strong>Add a sub-issue</strong> - break a larger issue into
+smaller, trackable pieces.</li>
+</ol>
+<h3 id="challenge-4.1-create-your-first-issue">Challenge 4.1: Create
+Your First Issue</h3>
+<p><strong>Goal:</strong> File a new issue in the Learning Room
+repository.</p>
+<ol type="1">
+<li>Open the <code>learning-room</code> repository in your browser.</li>
+<li>Navigate to the <strong>Issues</strong> tab (keyboard shortcut:
+press <code>G</code> then <code>I</code>).</li>
+<li>Activate the <strong>New issue</strong> button.</li>
+<li>If a template picker appears, select <strong>Open a blank
+issue</strong>.</li>
+<li>Type a clear, specific title (at least 12 characters). Examples:
+<ul>
+<li>“Add missing contributor background paragraph in welcome.md”</li>
+<li>“Keyboard shortcuts table has incorrect NVDA modifier key”</li>
+<li>“Setup guide link to accessibility settings is broken”</li>
+</ul></li>
+<li>Write a meaningful description (at least 80 characters). Include
+what the problem is, where it exists (file name and section), and what a
+fix might look like.</li>
+<li>Activate <strong>Submit new issue</strong>.</li>
+<li>Note the issue number (for example, <code>#150</code>). You will
+reference this later.</li>
+</ol>
+<p><strong>You are done when:</strong> Your new issue appears in the
+Issues list with your username as the author.</p>
+<h3 id="challenge-4.2-comment-and-mention">Challenge 4.2: Comment and
+<span class="citation" data-cites="Mention">@Mention</span></h3>
+<p><strong>Goal:</strong> Leave a comment on another student’s issue and
+use an <span class="citation" data-cites="mention">@mention</span> to
+notify them.</p>
+<ol type="1">
+<li>Open the <strong>Issues</strong> tab in the
+<code>learning-room</code> repository.</li>
+<li>Find an issue created by a classmate (look for issues from Challenge
+4.1, or browse open issues).</li>
+<li>Open the issue by activating its title link.</li>
+<li>Read the issue description to understand what they reported.</li>
+<li>Scroll to the comment box at the bottom.</li>
+<li>Write a helpful comment that <strong><span class="citation"
+data-cites="mentions">@mentions</span> the issue author by
+username</strong>. Examples:
+<ul>
+<li>“<span class="citation" data-cites="classmate">@classmate</span> I
+can confirm this - the link in setup-guide.md goes to a 404 page.”</li>
+<li>“<span class="citation" data-cites="classmate">@classmate</span>
+Good catch! I think the correct shortcut is Insert+F7, not
+Insert+F5.”</li>
+<li>“<span class="citation" data-cites="classmate">@classmate</span> I’d
+suggest adding the paragraph right after the ‘Who Can Contribute’
+heading.”</li>
+</ul></li>
+<li>Activate the <strong>Comment</strong> button (or press
+<code>Ctrl+Enter</code>).</li>
+</ol>
+<p><strong>Why <span class="citation"
+data-cites="mentions">@mentions</span> matter:</strong> When you type
+<code>@username</code>, GitHub sends that person a notification. This is
+how real open source teams communicate - you signal who needs to see
+your message. It also bridges into Chapter 10 (Notifications) where you
+will configure how you receive these alerts.</p>
+<p><strong>You are done when:</strong> Your comment appears in the
+thread and includes an <span class="citation"
+data-cites="mention">@mention</span> (the username will render as a
+clickable link).</p>
+<h3 id="challenge-4.3-add-a-sub-issue">Challenge 4.3: Add a
+Sub-Issue</h3>
+<p><strong>Goal:</strong> Break a larger issue into smaller, trackable
+pieces using GitHub’s sub-issue feature.</p>
+<blockquote>
+<p><strong>What are sub-issues?</strong> Sub-issues let you decompose a
+big task into smaller steps, each tracked independently. The parent
+issue shows a progress bar as sub-issues are completed. This is how
+teams organize real work - a single “Fix accessibility in welcome.md”
+issue might have sub-issues for each specific fix.</p>
+</blockquote>
+<ol type="1">
+<li>Open the issue you created in Challenge 4.1 (or any open issue you
+have permission to edit).</li>
+<li>Look for the <strong>Sub-issues</strong> section in the issue
+sidebar (right side on desktop). If you do not see it, look for an
+<strong>Add sub-issue</strong> button or the <strong>Create
+sub-issue</strong> option below the issue description.</li>
+<li>Activate <strong>Add sub-issue</strong> and choose <strong>Create
+new sub-issue</strong>.</li>
+<li>Give the sub-issue a clear title that describes one specific piece
+of the parent issue. For example, if the parent is “Fix accessibility in
+welcome.md”:
+<ul>
+<li>Sub-issue: “Add alt text to welcome banner image”</li>
+<li>Sub-issue: “Fix heading hierarchy in Getting Started section”</li>
+</ul></li>
+<li>Add a short description and activate <strong>Create</strong>.</li>
+<li>The sub-issue now appears nested under the parent issue with a
+progress indicator.</li>
+</ol>
+<p><strong>You are done when:</strong> Your parent issue shows at least
+one sub-issue in the Sub-issues section.</p>
+<h3 id="completing-chapter-4">Completing Chapter 4</h3>
+<p>Post a comment on your <strong>assigned Chapter 4.1 challenge
+issue</strong> with your evidence:</p>
+<pre class="text"><code>Chapter 4 completed:
+- Challenge 4.1: Created issue #[number]
+- Challenge 4.2: Commented with @mention on issue #[number]
+- Challenge 4.3: Added sub-issue to issue #[number]</code></pre>
+<p>Replace <code>[number]</code> with actual issue numbers. Then close
+your Chapter 4 challenge issues.</p>
+<h3 id="expected-outcomes">Expected Outcomes</h3>
+<ul>
+<li>Student can create an issue with a clear title and description.</li>
+<li>Student can communicate in issue threads using <span
+class="citation" data-cites="mentions">@mentions</span>.</li>
+<li>Student can organize work by breaking issues into sub-issues.</li>
+</ul>
+<h3 id="if-you-get-stuck">If You Get Stuck</h3>
+<ol type="1">
+<li>Can’t find a classmate’s issue? Filter the Issues tab by
+<code>is:open</code> and look for recent ones.</li>
+<li><span class="citation" data-cites="mention">@mention</span> not
+working? Make sure you type <code>@</code> immediately followed by the
+username with no space.</li>
+<li>Sub-issue option not visible? Ask a facilitator - the feature may
+need to be enabled for the repository.</li>
+<li>Still stuck? Ask a facilitator for a direct issue link.</li>
+</ol>
+<h3 id="learning-moment">Learning Moment</h3>
+<p>Issues are collaborative spaces, not just task lists. An <span
+class="citation" data-cites="mention">@mention</span> tells someone “I
+need your attention here.” Sub-issues turn vague tasks into clear
+checklists. Both skills are used daily in real open source projects.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 5: VS Code Accessibility</strong> - Guided VS Code
+Accessibility Baseline (No Bot Check)
+</summary>
+<h3 id="goal">Goal</h3>
+<p>Confirm students can access VS Code (github.dev or desktop), enable
+screen reader support, and perform core file navigation.</p>
+<h3 id="student-steps">Student Steps</h3>
+<ol type="1">
+<li>Open any repository and launch github.dev with <code>.</code>
+(period key).</li>
+<li>Screen reader mode setup:
+<ul>
+<li>Windows (NVDA/JAWS): enable with <code>Shift+Alt+F1</code>.</li>
+<li>Mac (VoiceOver): mode is usually already optimized. If needed, run
+Command Palette and search
+<code>Toggle Screen Reader Accessibility Mode</code>.</li>
+</ul></li>
+<li>Open Explorer with <code>Ctrl+Shift+E</code> (Mac:
+<code>Cmd+Shift+E</code>).</li>
+<li>Open <code>README.md</code> from the file tree.</li>
+<li>Open outline/symbols with <code>Ctrl+Shift+O</code> (Mac:
+<code>Cmd+Shift+O</code>).</li>
+<li>Open Command Palette with <code>Ctrl+Shift+P</code> (Mac:
+<code>Cmd+Shift+P</code>) and run any command.</li>
+<li>Return to your assigned challenge issue and post a completion
+comment using this format:</li>
+</ol>
+<pre class="text"><code>Chapter 5 complete:
+- Opened github.dev: yes
+- Screen reader mode enabled: yes
+- Opened file in Explorer: yes
+- Opened outline/symbols: yes
+- Opened Command Palette: yes</code></pre>
+<h3 id="expected-outcomes-1">Expected Outcomes</h3>
+<ul>
+<li>Student can launch and navigate github.dev or desktop VS Code.</li>
+<li>Student can enable screen reader mode and open core navigation
+surfaces.</li>
+<li>Student is ready for VS Code-based contribution chapters.</li>
+</ul>
+<h3 id="if-you-get-stuck-1">If You Get Stuck</h3>
+<ol type="1">
+<li>Confirm you are in a repository page before pressing
+<code>.</code>.</li>
+<li>Retry screen reader mode toggle once, then verify in settings.</li>
+<li>On Mac with VoiceOver, use Command Palette
+(<code>Cmd+Shift+P</code>) and run
+<code>Toggle Screen Reader Accessibility Mode</code> if keyboard
+navigation feels inconsistent.</li>
+<li>Use Command Palette to run commands when shortcut memory is
+hard.</li>
+<li>Ask facilitator for a side-by-side demo and repeat the same 5
+steps.</li>
+</ol>
+<h3 id="learning-moment-1">Learning Moment</h3>
+<p>Tool setup is part of contribution skill. A stable, accessible editor
+reduces stress and increases contribution quality.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 6: Working with Pull Requests</strong> - 3 PR-Validated
+Challenges
+</summary>
+<blockquote>
+<p><strong>Branch guidance:</strong> This is the first chapter where you
+edit files and create branches.</p>
+<ul>
+<li><strong>Web editor (recommended):</strong> When you edit a file on
+GitHub.com and click “Propose changes,” GitHub creates a branch for you.
+Name it <code>fix/yourname-issueXX</code>.</li>
+<li><strong>Local Git:</strong> Create a branch with
+<code>git checkout -b fix/yourname-issueXX</code> from
+<code>main</code>.</li>
+<li><strong>Do NOT use your <code>username-practice</code> branch
+yet.</strong> That is for Chapter 11 and beyond.</li>
+</ul>
+</blockquote>
+<h3 id="challenge-set-1">Challenge Set</h3>
+<ol type="1">
+<li><strong>Create one small branch change</strong> - edit a practice
+file on a new branch.</li>
+<li><strong>Open a linked PR</strong> - use the PR template and include
+<code>Closes #XX</code>.</li>
+<li><strong>Pass required checks</strong> - respond to bot feedback
+until all required checks pass.</li>
+</ol>
+<h3 id="challenge-6.1-create-one-small-branch-change">Challenge 6.1:
+Create One Small Branch Change</h3>
+<p><strong>Goal:</strong> Edit one of the practice files and save your
+change on a new branch.</p>
+<p>Open your <strong>assigned Chapter 6.1 challenge issue</strong> (the
+one titled “Chapter 6.1: Create One Small Branch Change (<span
+class="citation" data-cites="yourname">@yourname</span>)”). The issue
+description tells you which file to edit and what to fix.</p>
+<p>The Learning Room has three practice files with intentional problems.
+Your assigned issue points you to one of them:</p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr>
+<th>File</th>
+<th>What to fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/welcome.md</code></td>
+<td>Three <code>[TODO]</code> sections where content is missing</td>
+</tr>
+<tr>
+<td><code>docs/keyboard-shortcuts.md</code></td>
+<td>Intentional errors in shortcut references</td>
+</tr>
+<tr>
+<td><code>docs/setup-guide.md</code></td>
+<td>Broken links and incomplete steps</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Using the web editor:</strong></p>
+<ol type="1">
+<li>Navigate to the file in the <code>learning-room</code>
+repository.</li>
+<li>Activate the <strong>pencil icon</strong> (Edit this file).</li>
+<li>Make your change (keep it small and focused).</li>
+<li>Activate <strong>Commit changes</strong>.</li>
+<li>In the branch name field, type:
+<code>fix/yourname-issueXX</code>.</li>
+<li>Select <strong>Create a new branch for this commit and start a pull
+request</strong>.</li>
+<li>Activate <strong>Propose changes</strong>.</li>
+</ol>
+<h3 id="challenge-6.2-open-a-linked-pr">Challenge 6.2: Open a Linked
+PR</h3>
+<ol type="1">
+<li>On the “Open a pull request” page, write a descriptive title.</li>
+<li>In the body, include a summary of your change (at least 50
+characters) and the line <code>Closes #XX</code> (where XX is your
+Chapter 6 challenge issue number).</li>
+<li>Verify the base branch is <code>main</code> and the compare branch
+is your <code>fix/</code> branch.</li>
+<li>Activate <strong>Create pull request</strong>.</li>
+</ol>
+<h3 id="challenge-6.3-pass-required-checks">Challenge 6.3: Pass Required
+Checks</h3>
+<ol type="1">
+<li>Wait about 30 seconds. The bot posts a validation comment.</li>
+<li>Read the bot feedback. It checks: issue reference, description
+length, file location, and accessibility.</li>
+<li>If the bot reports failures, edit the file again (directly on your
+branch via the Files changed tab pencil icon), fix the issue, and
+commit. The bot re-runs automatically.</li>
+<li>Repeat until all checks show green checkmarks.</li>
+<li>Request a review from a peer or facilitator.</li>
+</ol>
+<h3 id="expected-outcomes-2">Expected Outcomes</h3>
+<ul>
+<li>Student opens a focused PR that maps to one issue.</li>
+<li>Student uses <code>Closes #XX</code> correctly.</li>
+<li>Student can interpret bot feedback and improve the PR.</li>
+</ul>
+<h3 id="if-you-get-stuck-2">If You Get Stuck</h3>
+<ol type="1">
+<li>Confirm your PR includes <code>Closes #XX</code> in title or
+body.</li>
+<li>Check that changed files are only in
+<code>learning-room/</code>.</li>
+<li>Open the bot validation comment and resolve one required check at a
+time.</li>
+<li>If checks still fail, ask for peer or facilitator review with the
+exact error message.</li>
+</ol>
+<h3 id="learning-moment-2">Learning Moment</h3>
+<p>A great PR is small, linked to an issue, and easy to review. Faster
+feedback builds confidence and momentum.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 7: Merge Conflicts</strong> - 1 Controlled Conflict
+Drill
+</summary>
+<h3 id="challenge-resolve-conflict-markers">Challenge: Resolve Conflict
+Markers</h3>
+<p><strong>Sample file:</strong> <a
+href="./samples/chapter-6-conflict-practice-sample.md"><code>learning-room/docs/samples/chapter-6-conflict-practice-sample.md</code></a></p>
+<ol type="1">
+<li>Open the assigned merge-conflict practice issue.</li>
+<li>Edit only the designated practice file/section.</li>
+<li>Remove conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>,
+<code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>) and
+keep the intended final content.</li>
+<li>Open PR with <code>Closes #XX</code> and complete with a short issue
+comment summary.</li>
+</ol>
+<h3 id="expected-outcomes-3">Expected Outcomes</h3>
+<ul>
+<li>Student can identify conflict markers immediately.</li>
+<li>Student can remove markers and keep intended content.</li>
+<li>Student can submit a clean, issue-linked PR after resolution.</li>
+</ul>
+<h3 id="if-you-get-stuck-3">If You Get Stuck</h3>
+<ol type="1">
+<li>Pause and read marker blocks line by line before editing.</li>
+<li>Keep one side, or combine both sides when both lines are valid.</li>
+<li>Delete all marker lines (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>,
+<code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>).</li>
+<li>Ask facilitator to sanity-check final content before opening
+PR.</li>
+</ol>
+<h3 id="learning-moment-3">Learning Moment</h3>
+<p>Merge conflicts are not failures. They are a normal collaboration
+checkpoint and a chance to make an intentional content decision.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 8: Culture and Etiquette</strong> - Optional Guided
+Reflection
+</summary>
+<h3 id="optional-guided-reflection-issue-comment-evidence">Optional
+Guided Reflection (Issue Comment Evidence)</h3>
+<p>Students can post one short comment on their assigned issue:</p>
+<pre class="text"><code>Chapter 8 reflection:
+- One respectful review habit I will use:
+- One way I will ask for help clearly:
+- One way I will respond to feedback constructively:</code></pre>
+<p>This keeps learning visible without creating a pass/fail pressure
+point.</p>
+<p><strong>Completion criteria:</strong> Post one sentence for each of
+the three prompts.</p>
+<h3 id="expected-outcomes-4">Expected Outcomes</h3>
+<ul>
+<li>Student can name respectful collaboration behaviors.</li>
+<li>Student can prepare a constructive feedback style before review
+work.</li>
+<li>Student feels safer asking for help in public threads.</li>
+</ul>
+<h3 id="if-you-get-stuck-4">If You Get Stuck</h3>
+<ol type="1">
+<li>Use one simple sentence per prompt.</li>
+<li>Focus on one real behavior you can do today.</li>
+<li>If writing feels hard, draft bullet points first, then post.</li>
+<li>Ask facilitator for one example response and adapt it.</li>
+</ol>
+<h3 id="learning-moment-4">Learning Moment</h3>
+<p>Technical quality and communication quality work together.
+Respectful, clear communication helps good code get merged faster.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 9: Labels, Milestones, and Projects</strong> - 1 Guided
+Triage Recommendation
+</summary>
+<h3 id="challenge-triage-recommendation-comment">Challenge: Triage
+Recommendation Comment</h3>
+<p><strong>Estimated time:</strong> 5-10 minutes</p>
+<ol type="1">
+<li>Open your assigned challenge issue.</li>
+<li>Review issue title, description, and target file.</li>
+<li>Post a triage recommendation comment using this format:</li>
+</ol>
+<pre class="text"><code>Chapter 9 triage recommendation:
+- Suggested labels:
+- Suggested milestone:
+- Suggested project board column:
+- One-sentence reason:</code></pre>
+<ol start="4" type="1">
+<li>If you have write access, apply the recommended labels/milestone
+directly.</li>
+</ol>
+<p>This keeps the task simple and accessible for all students, including
+those without triage permissions.</p>
+<h3 id="expected-outcomes-5">Expected Outcomes</h3>
+<ul>
+<li>Student can recommend labels/milestone/project placement using issue
+context.</li>
+<li>Student understands triage even without maintainer permissions.</li>
+<li>Student leaves a clear, reusable triage note for maintainers.</li>
+</ul>
+<h3 id="if-you-get-stuck-5">If You Get Stuck</h3>
+<ol type="1">
+<li>Start with one label only (<code>documentation</code>,
+<code>bug</code>, or <code>accessibility</code>).</li>
+<li>If milestone is unclear, write <code>none</code> and explain
+why.</li>
+<li>If project board is unknown, write <code>needs triage</code> and
+continue.</li>
+<li>Ask facilitator to review your one-sentence reason before
+posting.</li>
+</ol>
+<h3 id="learning-moment-5">Learning Moment</h3>
+<p>Triage is about clarity, not authority. Good recommendations reduce
+maintainer effort and speed up collaboration.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 10: Notifications</strong> - Guided Setup Walkthrough
+(No Bot Check)
+</summary>
+<h3 id="goal-1">Goal</h3>
+<p>Set up a useful notification workflow so students can keep up with
+reviews, mentions, and assignments without inbox overload.</p>
+<p><strong>Estimated time:</strong> 8-12 minutes</p>
+<h3 id="student-steps-1">Student Steps</h3>
+<ol type="1">
+<li>Open the workshop repository and set <strong>Watch</strong> to
+<strong>Participating and <span class="citation"
+data-cites="mentions">@mentions</span></strong>.</li>
+<li>Open the notifications inbox:
+<code>https://github.com/notifications</code>.</li>
+<li>Activate the <strong>Review requested</strong> filter.</li>
+<li>Activate the <strong>Assigned</strong> filter.</li>
+<li>Open one notification and return to inbox.</li>
+<li>Perform one inbox action on a non-critical thread:
+<ul>
+<li><code>M</code> to mute, or</li>
+<li><code>E</code> to mark done.</li>
+</ul></li>
+</ol>
+<h3 id="expected-outcome">Expected Outcome</h3>
+<ul>
+<li>Student can find review requests quickly.</li>
+<li>Student can find assigned work quickly.</li>
+<li>Student can reduce noise with one inbox action.</li>
+</ul>
+<h3 id="if-you-get-stuck-6">If You Get Stuck</h3>
+<ol type="1">
+<li>Reload the notifications page and reapply one filter at a time.</li>
+<li>If inbox is empty, switch to <code>Done</code> and practice action
+flow there.</li>
+<li>If shortcuts conflict with screen reader mode, focus the
+notification row and retry.</li>
+<li>Ask facilitator to model one inbox action live, then repeat.</li>
+</ol>
+<h3 id="learning-moment-6">Learning Moment</h3>
+<p>Notification management protects focus. You can stay responsive
+without drowning in updates.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 11: Git &amp; Source Control in VS Code</strong> - 3
+Bot-Validated Local Git Challenges
+</summary>
+<h3 id="challenge-set-2">Challenge Set</h3>
+<p><strong>Estimated time:</strong> 20-30 minutes</p>
+<p><strong>Prerequisite checkpoint:</strong> Complete Chapter 5 first so
+VS Code navigation and accessibility settings are already stable.</p>
+<ol type="1">
+<li><strong>Clone the sci-fi themes repository</strong>
+<ul>
+<li>Clone
+<code>https://github.com/community-access/vscode-sci-fi-themes.git</code>
+to your local machine using VS Code.</li>
+<li>Explore the themes and pick one (Star Trek, Hitchhiker’s Guide, or
+Star Wars).</li>
+</ul></li>
+<li><strong>Make one small commit</strong>
+<ul>
+<li>Edit a file in the cloned repo (or in the learning-room), stage
+changes, write a clear commit message, and commit locally.</li>
+</ul></li>
+<li><strong>Push and open a linked PR</strong>
+<ul>
+<li>Push your branch and open a PR that references a challenge issue
+with <code>Closes #XX</code>.</li>
+</ul></li>
+</ol>
+<h3 id="expected-outcomes-6">Expected Outcomes</h3>
+<ul>
+<li>Student can clone a repository using VS Code Command Palette.</li>
+<li>Student can navigate the Source Control panel and stage files.</li>
+<li>Student can write a clear commit message and push a branch to
+GitHub.</li>
+</ul>
+<h3 id="if-you-get-stuck-7">If You Get Stuck</h3>
+<ol type="1">
+<li>Confirm Command Palette opens with <code>Ctrl+Shift+P</code>
+(Windows) or <code>Cmd+Shift+P</code> (Mac).</li>
+<li>If Source Control panel doesn’t open, use <code>Ctrl+Shift+G</code>
+(Windows) or <code>Cmd+Shift+G</code> (Mac).</li>
+<li>If push fails, verify authentication: <code>Ctrl+Shift+P</code> →
+“Git: Fetch” to test connection.</li>
+<li>If branch won’t create, confirm VS Code is in the cloned repository
+folder (status bar shows branch name).</li>
+<li>Ask facilitator to verify your clone location and help with one
+push.</li>
+</ol>
+<h3 id="fun-fact">Fun Fact</h3>
+<p>Once you’ve cloned the sci-fi themes repo and applied a theme, open
+Copilot Chat (<code>Ctrl+Shift+I</code>) and ask it a question. While it
+thinks, watch your custom sci-fi loading phrases appear.</p>
+<h3 id="learning-moment-7">Learning Moment</h3>
+<p>Local Git operations give you full control and immediate feedback.
+You can see your changes before they reach GitHub.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 12: GitHub Pull Requests Extension</strong> - 2 Guided
+PR Review Challenges
+</summary>
+<h3 id="challenge-set-3">Challenge Set</h3>
+<p><strong>Estimated time:</strong> 15-25 minutes</p>
+<ol type="1">
+<li><strong>Install the GitHub Pull Requests extension</strong>
+<ul>
+<li>Add the extension to VS Code and sign in with your GitHub
+account.</li>
+</ul></li>
+<li><strong>Check out a challenge PR and post a review</strong>
+<ul>
+<li>Download a PR branch locally and write one constructive review
+comment.</li>
+<li>If checkout is blocked by permissions, complete the challenge by
+reviewing the PR in read-only mode and posting one specific
+comment.</li>
+</ul></li>
+</ol>
+<h3 id="expected-outcomes-7">Expected Outcomes</h3>
+<ul>
+<li>Student can install and authenticate the GitHub PR extension.</li>
+<li>Student can check out a PR branch in VS Code.</li>
+<li>Student can interactively review changes and post feedback.</li>
+</ul>
+<h3 id="if-you-get-stuck-8">If You Get Stuck</h3>
+<ol type="1">
+<li>If extension doesn’t install, reload VS Code with
+<code>Ctrl+Shift+P</code> → “Developer: Reload Window”.</li>
+<li>If OAuth sign-in fails, verify your GitHub account is active in the
+browser first, then retry.</li>
+<li>If PR list is empty, switch to “All Open” view in the GitHub section
+of Explorer.</li>
+<li>If checkout fails, confirm you have write access to the repository
+or ask facilitator.</li>
+<li>Ask facilitator to verify the GitHub PR view in Explorer and help
+with one checkout.</li>
+<li>If Activity Bar focus is hard with a screen reader, use Command
+Palette and run
+<code>GitHub Pull Requests: Focus on Pull Requests View</code>.</li>
+</ol>
+<h3 id="learning-moment-8">Learning Moment</h3>
+<p>PR tooling multiplies your impact. Reviewing others’ work refines
+your own standards and builds community trust.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 13: GitHub Copilot</strong> - 3 Guided AI-Assisted
+Writing Challenges
+</summary>
+<p><strong>Access note:</strong> GitHub Copilot Free tier works for this
+workshop. Paid plan is not required.</p>
+<h3 id="challenge-set-4">Challenge Set</h3>
+<ol type="1">
+<li><strong>Install GitHub Copilot and sign in</strong>
+<ul>
+<li>Install the GitHub Copilot Chat extension from Extensions sidebar
+and authenticate.</li>
+</ul></li>
+<li><strong>Clone the sci-fi themes repo and ask Copilot to explain
+it</strong>
+<ul>
+<li>Clone
+<code>https://github.com/community-access/vscode-sci-fi-themes.git</code></li>
+<li>Open Copilot Chat (<code>Ctrl+Shift+I</code> / Mac:
+<code>Cmd+Shift+I</code>)</li>
+<li>Ask: “What does the <code>chat.agent.thinking.phrases</code> setting
+do in VS Code?”</li>
+<li>Read Copilot’s explanation and apply one theme to your
+settings.json</li>
+<li>Reload VS Code and see custom sci-fi phrases in Copilot Chat!</li>
+</ul></li>
+<li><strong>Create a custom theme with Copilot</strong>
+<ul>
+<li>In Copilot Chat, ask: “Create custom GitHub Copilot thinking phrases
+for [your favorite universe - Dune, Marvel, Studio Ghibli, etc.]”</li>
+<li>Copilot generates a theme</li>
+<li>Copy it into your settings.json and reload VS Code</li>
+<li>Enjoy your personalized Copilot experience!</li>
+</ul></li>
+</ol>
+<h3 id="expected-outcomes-8">Expected Outcomes</h3>
+<ul>
+<li>Student can install and authenticate GitHub Copilot Chat.</li>
+<li>Student can ask Copilot effective questions about code and
+settings.</li>
+<li>Student can use Copilot’s output to customize their development
+environment in fun and creative ways.</li>
+</ul>
+<h3 id="if-you-get-stuck-9">If You Get Stuck</h3>
+<ol type="1">
+<li>If extension installation fails, reload VS Code with
+<code>Ctrl+Shift+P</code> → “Developer: Reload Window”.</li>
+<li>If OAuth sign-in fails, verify your GitHub account is active in the
+browser first.</li>
+<li>If Chat panel doesn’t open, try <code>Ctrl+Shift+I</code> (Windows)
+or <code>Cmd+Shift+I</code> (Mac).</li>
+<li>If Chat seems unresponsive, click the model selector at bottom of
+Chat and confirm you’re signed in.</li>
+<li>Ask facilitator to help verify Copilot is activated and show you one
+prompt.</li>
+</ol>
+<h3 id="learning-moment-9">Learning Moment</h3>
+<p>AI assistance amplifies clarity. Copilot is not just for code. It can
+also support clear writing and practical customization of your
+development environment.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 14: Accessible Code Review</strong> - 2 Guided PR Review
+Challenges
+</summary>
+<h3 id="challenge-set-5">Challenge Set</h3>
+<ol type="1">
+<li><strong>Review a practice PR and leave 2-3 inline comments</strong>
+<ul>
+<li>Check out or view an assigned practice PR, read the diff, and post
+constructive feedback on 2-3 specific lines.</li>
+</ul></li>
+<li><strong>Submit a formal review verdict</strong>
+<ul>
+<li>Complete your review by submitting an approval, request-changes, or
+comment-only verdict on the PR.</li>
+</ul></li>
+</ol>
+<h3 id="expected-outcomes-9">Expected Outcomes</h3>
+<ul>
+<li>Student can navigate PR diffs with a screen reader.</li>
+<li>Student can post inline comments on specific lines.</li>
+<li>Student can write constructive feedback that helps the author
+improve.</li>
+</ul>
+<h3 id="if-you-get-stuck-10">If You Get Stuck</h3>
+<ol type="1">
+<li>If Files Changed tab won’t open, reload the PR page and retry.</li>
+<li>If inline comment button is hard to find, use the file tree to jump
+between files (<code>Press 3</code> in NVDA/JAWS).</li>
+<li>If you’re unsure what to comment on, focus on clarity: heading
+structure, link text, missing steps, or typos.</li>
+<li>If submitting the review fails, check that you’re not in draft mode
+and have write access to the repo.</li>
+<li>Ask facilitator to help you navigate one diff and model one
+constructive comment.</li>
+</ol>
+<h3 id="learning-moment-10">Learning Moment</h3>
+<p>Constructive review is a gift. Specific, kind feedback helps authors
+improve and builds trust in the community.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 15: Issue Templates</strong> - 2-3 Guided Template
+Design Challenges Using Registration Template
+</summary>
+<h3 id="challenge-set-6">Challenge Set</h3>
+<p><strong>Estimated time:</strong> 2-2.5 hours (includes YAML learning
+and remix practice)</p>
+<p><strong>Sample files used in this challenge:</strong> - Source
+template: <a
+href="../../.github/ISSUE_TEMPLATE/workshop-registration.yml"><code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code></a>
+- Remix example: <a
+href="./samples/chapter-15-registration-remix-example.yml"><code>learning-room/docs/samples/chapter-15-registration-remix-example.yml</code></a></p>
+<p>The registration template you filled out on Day 1 is your teaching
+tool. It demonstrates YAML form-based templates with accessibility-first
+design.</p>
+<ol type="1">
+<li><strong>Analyze the registration template</strong>
+<ul>
+<li>Open:
+<code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code></li>
+<li>Read the YAML structure: frontmatter (name, description, title,
+labels) and field types</li>
+<li>Notice field types: input, dropdown, textarea, markdown</li>
+<li>Observe: each field has a label, description, and validation
+rule</li>
+<li>Compare: How is this better than a blank issue form?</li>
+<li>Evidence: Short comment explaining one way the template improved
+contributions</li>
+</ul></li>
+<li><strong>Remix the registration template for a new context</strong>
+<ul>
+<li>Take the registration template structure and adapt it for a
+different use case</li>
+<li>Keep the YAML pattern, change the context: (e.g., bug report,
+workshop feedback, accessibility audit)</li>
+<li>Update: field names, labels, descriptions, and dropdown options</li>
+<li>Create: <code>.github/ISSUE_TEMPLATE/my-template.yml</code> in your
+test repository</li>
+<li>Commit and push</li>
+<li>Validate YAML syntax before pushing (for example: <a
+href="https://www.yamllint.com/"
+class="uri">https://www.yamllint.com/</a>)</li>
+<li>Evidence: PR or comment linking to your remixed template</li>
+</ul></li>
+<li><strong>Optional: Create a Markdown template</strong>
+<ul>
+<li>Create:
+<code>.github/ISSUE_TEMPLATE/my-markdown-template.md</code></li>
+<li>Write YAML frontmatter (same pattern as registration template)</li>
+<li>Add Markdown body with 3-4 sections and HTML comment
+instructions</li>
+<li>Test in the template chooser if your repository supports it</li>
+<li>Evidence: PR or comment linking to your Markdown template</li>
+</ul></li>
+</ol>
+<h3 id="expected-outcomes-10">Expected Outcomes</h3>
+<ul>
+<li>Student can read and understand YAML form template structure</li>
+<li>Student can adapt a professional template to a new context</li>
+<li>Student understands why templates improve contribution quality and
+consistency</li>
+<li>Student can create both YAML form-based and Markdown templates</li>
+<li>Student recognizes accessibility-first design in form templates</li>
+</ul>
+<h3 id="if-you-get-stuck-11">If You Get Stuck</h3>
+<ol type="1">
+<li><strong>Can’t find the registration template?</strong> Look in
+<code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code> — that’s
+the form you filled out to join.</li>
+<li><strong>YAML structure confusing?</strong> Start by copying the
+registration template. Modify only the field descriptions and labels
+first. Leave the structure intact.</li>
+<li><strong>YAML not parsing?</strong> Compare your file against the
+provided remix sample and validate indentation with two spaces per
+level.</li>
+<li><strong>Not sure what context to remix for?</strong> Try: bug
+report, feature request, workshop feedback, accessibility audit form, or
+event signup.</li>
+<li><strong>Template doesn’t appear in chooser?</strong> Verify filename
+ends in <code>.yml</code> or <code>.md</code>, file is in
+<code>.github/ISSUE_TEMPLATE/</code>, and you pushed the commit. Try a
+fresh Issues tab reload.</li>
+<li><strong>Repository permissions issue?</strong> Ask facilitator for
+write access to a shared test repository.</li>
+<li><strong>Want to see how it all works?</strong> Ask facilitator to
+show you a template they created.</li>
+</ol>
+<h3 id="learning-moment-11">Learning Moment</h3>
+<p>The best template is one you’ve already used. By remixing the
+registration template, you learned that template design is about pattern
+recognition and context adaptation, not starting from scratch every
+time. When you maintain a project later, you’ll do this: analyze what
+worked, adapt it to your new context, then iterate. Professional
+templates exist because someone did this exercise and discovered what
+works. Your remix becomes their teachable example.</p>
+</details>
+<details>
+<summary>
+<strong>Chapter 16: Accessibility Agents</strong> - 3-5 Guided Agent
+Exploration &amp; Validation Challenges
+</summary>
+<h3 id="starter-set-use-these-first">Starter Set (Use These First)</h3>
+<p>If 55 agents feels too broad, start with this sequence: 1.
+<code>@daily-briefing</code> (maps to repository navigation and issue
+awareness) 2. <code>@issue-tracker</code> (maps to Chapter 4 issue
+workflow) 3. <code>@pr-review</code> (maps to Chapter 6 and Chapter 14
+review skills)</p>
+<p>Once these feel comfortable, expand to specialist agents.</p>
+<h3 id="challenge-set-7">Challenge Set</h3>
+<ol type="1">
+<li><strong>Agent Discovery Mapping</strong>
+<ul>
+<li>Read Section 3: The Ecosystem (55 agents across 3 teams)</li>
+<li>Use the discovery framework: Skill you already have -&gt; matching
+agent -&gt; one safe first prompt</li>
+<li>Match 3-5 agents to Day 1 skills you already have</li>
+<li>Answer: <em>“I am ready for this agent because I have already
+[skill]”</em></li>
+<li>Evidence: Issue comment with your mapping (use
+<code>#16-agent-discovery</code> label)</li>
+<li>Time: 20 minutes</li>
+</ul></li>
+<li><strong>Agent Skill Validation</strong>
+<ul>
+<li>Clone your fork of accessibility-agents repo</li>
+<li>Open Copilot Chat and run one agent from your discovery list</li>
+<li>Evaluate: Did the output match what you expected from manual
+experience?</li>
+<li>Answer three evaluation questions in an issue comment (use
+<code>#16-agent-validation</code> label)</li>
+<li>Time: 30 minutes</li>
+</ul></li>
+<li><strong>Agent Instructions Deep Dive</strong>
+<ul>
+<li>Read one <code>.agent.md</code> or <code>.prompt.md</code> file</li>
+<li>Answer: What is this agent trying to do? What tools does it have
+access to?</li>
+<li>Answer: Could this agent make a mistake? What kind?</li>
+<li>Evidence: Issue comment with your analysis (use
+<code>#16-agent-internals</code> label)</li>
+<li>Time: 15 minutes</li>
+</ul></li>
+</ol>
+<h3 id="optional-contribution-challenges-day-2-hackathon">Optional
+Contribution Challenges (Day 2 Hackathon)</h3>
+<ol start="4" type="1">
+<li><strong>Improve an Existing Agent</strong> (45 min)
+<ul>
+<li>Find an agent gap or improvement opportunity</li>
+<li>Edit the agent’s instructions</li>
+<li>Open a PR to accessibility-agents</li>
+<li>Evidence: Your merged PR</li>
+</ul></li>
+<li><strong>Propose a New Agent</strong> (60 min)
+<ul>
+<li>Identify an uncovered workflow</li>
+<li>File an issue with 3 example prompts</li>
+<li>Discuss with maintainers</li>
+<li>Evidence: Your issue with community discussion</li>
+</ul></li>
+</ol>
+<h3
+id="capstone-workshop-feedback-the-most-important-challenge">Capstone:
+Workshop Feedback (The Most Important Challenge!)</h3>
+<p><strong>This is not optional. Your feedback directly shapes the next
+cohort.</strong></p>
+<ol start="6" type="1">
+<li><strong>Share Your Experience - Workshop Feedback Form</strong>
+(15-20 min)
+<ul>
+<li>You’ve completed (or are working through) two days with us.</li>
+<li>Your constructive feedback helps us improve, helps future students,
+and teaches maintainers how to build better tools.</li>
+<li><strong>This feedback will be read, discussed, and acted
+on.</strong></li>
+<li>Open a new issue in git-going-with-github using the <strong>Workshop
+Feedback</strong> template</li>
+<li><strong>Direct link:</strong> <a
+href="https://github.com/community-access/git-going-with-github/issues/new?template=feedback-workshop.yml">File
+Workshop Feedback</a></li>
+<li>Fill out as much or as little as you’re comfortable sharing</li>
+<li>No response is “wrong” - honest feedback is the only kind we
+want</li>
+</ul>
+<strong>What to cover (if you want to):</strong>
+<ul>
+<li>Which agents were most useful?</li>
+<li>Which agents confused you or didn’t work as expected?</li>
+<li>Did the chapter progression feel logical?</li>
+<li>Was the workshop accessible to you? (screen reader users, keyboard
+users, neurodivergent learners, all welcome)</li>
+<li>What concept will you remember in 6 months?</li>
+<li>What should we change for next time?</li>
+<li>Anything else? (Facilitator appreciation? Suggestions? Wild
+ideas?)</li>
+</ul>
+<strong>Evidence:</strong> Your submitted feedback issue becomes part of
+our workshop archive and roadmap.</li>
+</ol>
+<h3 id="expected-outcomes-11">Expected Outcomes</h3>
+<ul>
+<li>Student can map Day 1 manual skills to specific agents in the
+ecosystem</li>
+<li>Student understands <strong>Skill First, Agent Second</strong>
+principle</li>
+<li>Student has used at least one agent in Copilot Chat</li>
+<li>Student can read and evaluate agent instructions</li>
+<li><strong>(Capstone)</strong> Student has shared honest, constructive
+feedback that helps future cohorts</li>
+<li>(Optional) Student has contributed an improvement or proposal to the
+project</li>
+</ul>
+<h3 id="if-you-get-stuck-12">If You Get Stuck</h3>
+<ol type="1">
+<li><strong>Can’t find matching agents?</strong> Start with
+<code>@daily-briefing</code> or <code>@issue-tracker</code>—those build
+directly on Chapters 2-5.</li>
+<li><strong>Agent output doesn’t make sense?</strong> That is valuable
+feedback. Paste it in an issue comment with your question. The error
+might point to a gap in the agent’s instructions.</li>
+<li><strong>Can’t see agents in Copilot Chat?</strong> Check: Is Copilot
+Chat extension installed (not just Copilot)? Are you signed in? Does
+<code>.github/agents/</code> folder exist in your cloned repo? Run
+<code>ls -la .github/agents/</code> to verify.</li>
+<li><strong>Clone failed?</strong> Use the terminal:
+<code>git clone https://github.com/[your-username]/accessibility-agents.git; cd accessibility-agents; code .</code></li>
+<li><strong>Feedback form feels overwhelming?</strong> Answer just one
+question. Any feedback is valuable. Start with “What confused you the
+most?” - that’s the most actionable for us.</li>
+<li><strong>Still stuck?</strong> Show facilitator: the agent you wanted
+to run, the output you got, and what you expected. They can verify
+setup.</li>
+</ol>
+<h3 id="learning-moment-12">Learning Moment</h3>
+<p>The 55 agents exist because someone did the manual work first, then
+automated the repetitive parts. The principle <strong>Skill First, Agent
+Second</strong> exists to protect you: it keeps you from treating AI as
+magic. You already know the limits of automation because you have done
+the work by hand. That expertise lets you evaluate agents critically,
+catch their mistakes, and improve them. The agents that will exist in
+the future will be built by people in this room who saw a gap and filled
+it.</p>
+<p><strong>Your feedback is the bridge between this workshop and the
+next one. Thank you for being honest. We are listening.</strong></p>
+</details>
+<h2 id="group-challenges">Group Challenges</h2>
+<p>These challenges require collaboration with your study group:</p>
+<ul>
+<li><strong>Group Documentation Sprint</strong>: Collaboratively improve
+docs</li>
+<li><strong>Peer Review Circle</strong>: Everyone reviews everyone</li>
+<li><strong>Accessibility Workshop</strong>: Teach each other a11y
+topics</li>
+<li><strong>Challenge Creation</strong>: Design new challenges
+together</li>
+</ul>
+<p><a href="GROUP_CHALLENGES.md"><strong>View Group Challenges
+→</strong></a></p>
+<h2 id="need-help">Need Help?</h2>
+<h3 id="getting-unstuck">Getting Unstuck</h3>
+<ol type="1">
+<li><strong>Read bot feedback</strong> (PR chapters only) - it includes
+specific fixes</li>
+<li><strong>Check the chapter documentation</strong> - each chapter file
+has full walkthroughs</li>
+<li><strong>Ask your peer reviewer</strong> - comment on your PR or
+issue</li>
+<li><strong>Ask your study group</strong> - use your group issue
+thread</li>
+<li><strong>Ask facilitators</strong> - <span class="citation"
+data-cites="mention">@mention</span> them in your issue or PR</li>
+</ol>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="../AUTOMATION.md">Automation Guide</a> - Understanding bot
+feedback</li>
+<li><a href="../../docs/06-working-with-pull-requests.md">PR
+Workflow</a> - Step-by-step PR process</li>
+<li><a href="../../docs/14-accessible-code-review.md">Accessibility
+Guide</a> - Accessibility principles</li>
+</ul>

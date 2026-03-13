@@ -4,7 +4,7 @@ Welcome to our collaborative learning space! This guide will help you get starte
 
 ## Getting Started
 
-Before you begin, please review [the setup guide](./docs/setup.md) for detailed instructions.
+Before you begin, please review [the setup guide](./setup.md) for detailed instructions.
 
 ## Quick Links
 
@@ -25,6 +25,6 @@ Here's how to make your first pull request:
 
 ## Resources
 
-For more information, [click here to read the full guide](./docs/complete-guide.md).
+For more information, [click here to read the full guide](https://community-access.org/git-going-with-github/docs/course-guide.html).
 
 Good luck! We're excited to have you here.
