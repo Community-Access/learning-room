@@ -73,4 +73,4 @@ When your pull request is merged:
 
 ---
 
-*Last reviewed: [DATE]*
+*Last reviewed: March 8, 2026*
