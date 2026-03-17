@@ -1,6 +1,5 @@
 /**
  * Build PR validation report markdown from validation results.
- * This is used by the PR Validation Bot workflow to format feedback.
  */
 
 function buildValidationReportBody(results, timestampIso) {
@@ -14,31 +13,32 @@ function buildValidationReportBody(results, timestampIso) {
   };
 
   const status = safeResults.passed
-    ? "✅ **Validation Passed**"
-    : "⚠️ **Validation Needs Attention**";
+    ? "🎉 **Hooray! Validation Passed**"
+    : "⚠️ **Let's fix a few things**";
 
-  let body = `## PR Validation Report\n\n${status}\n\n`;
+  let body = `Hi! I'm Aria. Here is my review of your pull request:\n\n### Report Status\n${status}\n\n`;
 
-  if ((safeResults.required || []).length > 0) {
-    body += "### ✓ Required Checks\n\n";
-    (safeResults.required || []).forEach(check => {
-      const icon = check.passed ? '✅' : '❌';
-      body += `${icon} **${check.name}**\n`;
-      if (!check.passed) {
-        body += `   ${check.message}\n`;
-        if (check.help) {
-          body += `   *${check.help}*\n`;
-        }
-      }
-      body += "\n";
-    });
+  if (safeResults.passed) {
+    body += `> **➡️ Great job! You unlocked the next level.**\n> Head back to the [Course Guide](../../docs/course-guide.md) to see what chapter is next!\n\n`;
   }
 
+  body += "### Required Checks\n\n";
+  (safeResults.required || []).forEach(check => {
+    body += `- **${check.name}**\n`;
+    if (!check.passed) {
+      body += `  ${check.message}\n`;
+      if (check.help) {
+        body += `  *${check.help}*\n`;
+      }
+    }
+    body += "\n";
+  });
+
   if ((safeResults.suggestions || []).length > 0) {
-    body += "### 💡 Suggestions for Improvement\n\n";
+    body += "### Suggestions for Improvement\n\n";
     body += "*These are optional but will make your contribution even better:*\n\n";
     safeResults.suggestions.forEach(suggestion => {
-      body += `- **${suggestion.title}:** ${suggestion.message}\n`;
+      body += `- ${suggestion.message}\n`;
       if (suggestion.help) {
         body += `  *${suggestion.help}*\n`;
       }
@@ -47,31 +47,29 @@ function buildValidationReportBody(results, timestampIso) {
   }
 
   if ((safeResults.accessibility || []).length > 0) {
-    body += "### ♿ Accessibility Analysis\n\n";
+    body += "### Accessibility Analysis\n\n";
     safeResults.accessibility.forEach(item => {
-      const icon = item.type === 'error' ? '❌' : '⚠️';
-      body += `${icon} **${item.title}**\n`;
-      body += `   ${item.message}\n`;
+      body += `- **${item.title}**\n`;
+      body += `  ${item.message}\n`;
       if (item.file) {
-        body += `   \`${item.file}\`${item.line ? ` (line ${item.line})` : ""}\n`;
+        body += `  \`${item.file}\`${item.line ? ` (line ${item.line})` : ""}\n`;
       }
       if (item.fix) {
-        body += `   **Fix:** ${item.fix}\n`;
+        body += `  **Fix:** ${item.fix}\n`;
       }
       body += "\n";
     });
   }
 
-  body += "### 📚 Learning Resources\n\n";
+  body += "### Learning Resources\n\n";
   body += "Based on your changes, these guides might help:\n\n";
   (safeResults.resources || []).forEach(resource => {
     body += `- [${resource.title}](${resource.url})\n`;
   });
 
   body += "\n---\n";
-  body += `*Automated validation by Learning Room Bot. Last updated: ${ts}*\n`;
-  body += "*Questions? Check the guides or mention @facilitator in a comment.*";
-  
+  body += `*Automated validation by Aria, your Workshop Agent. Last updated: ${ts}*\n`;
+  body += "*Questions? Check [PR Guidelines](../../docs/06-working-with-pull-requests.md) or mention @facilitator*";
   return body;
 }
 
