@@ -1,0 +1,111 @@
+name: "Challenge 16: Capstone Agent File Validation"
+# Validates that the student's agent file has valid YAML frontmatter,
+# responsibilities, and guardrails sections
+# NOTE: This workflow runs in the accessibility-agents repo, not learning-room
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "agents/**/*.md"
+      - "community-agents/**/*.md"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate-agent:
+    name: Verify Agent File
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Find and validate agent files
+        id: check
+        run: |
+          # Find new/modified .md files in agents/ or community-agents/
+          AGENTS=$(find agents community-agents -name '*.md' 2>/dev/null || true)
+          
+          if [ -z "$AGENTS" ]; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          FIRST=$(echo "$AGENTS" | head -1)
+          echo "file=$FIRST" >> "$GITHUB_OUTPUT"
+          
+          ERRORS=""
+          
+          # Check YAML frontmatter exists (starts with ---)
+          if head -1 "$FIRST" | grep -q '^---'; then
+            echo "has_frontmatter=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_frontmatter=false" >> "$GITHUB_OUTPUT"
+            ERRORS="missing YAML frontmatter"
+          fi
+          
+          # Check for responsibilities section
+          if grep -qi '## responsibilities\|## what this agent does' "$FIRST"; then
+            echo "has_responsibilities=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_responsibilities=false" >> "$GITHUB_OUTPUT"
+            ERRORS="$ERRORS${ERRORS:+, }missing responsibilities section"
+          fi
+          
+          # Check for guardrails section
+          if grep -qi '## guardrails\|## limitations\|## boundaries' "$FIRST"; then
+            echo "has_guardrails=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_guardrails=false" >> "$GITHUB_OUTPUT"
+            ERRORS="$ERRORS${ERRORS:+, }missing guardrails section"
+          fi
+          
+          echo "errors=$ERRORS" >> "$GITHUB_OUTPUT"
+
+      - name: Post result
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const found = '${{ steps.check.outputs.found }}' === 'true';
+            const file = '${{ steps.check.outputs.file }}';
+            const errors = '${{ steps.check.outputs.errors }}';
+            let body;
+            if (!found) {
+              body = [
+                '## Challenge 16: No agent file found',
+                '',
+                'Create an `.md` file in the `agents/` or `community-agents/` directory ',
+                'with YAML frontmatter, a responsibilities section, and a guardrails section.',
+                '',
+                'See [Chapter 20: Build Your Agent](https://github.com/Community-Access/git-going-with-github/blob/main/docs/20-build-your-agent.md) for the template.'
+              ].join('\n');
+            } else if (errors) {
+              body = [
+                '## Challenge 16: Agent file needs work',
+                '',
+                'Found `' + file + '` but it has issues: ' + errors + '.',
+                '',
+                'Your agent file should have:',
+                '- YAML frontmatter (between `---` markers)',
+                '- A responsibilities/purpose section',
+                '- A guardrails/limitations section',
+              ].join('\n');
+            } else {
+              body = [
+                '## Challenge 16: Agent file looks great!',
+                '',
+                'Found `' + file + '` with valid frontmatter, responsibilities, and guardrails. ',
+                'Excellent capstone work!'
+              ].join('\n');
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

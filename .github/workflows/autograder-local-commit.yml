@@ -1,0 +1,74 @@
+name: "Challenge 10: Local Commit Check"
+# Validates that the student made at least one commit on a non-default branch
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-local-commit:
+    name: Verify Local Commit Exists
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check branch and commits
+        id: check
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          if [ "$BRANCH" = "main" ]; then
+            echo "on_main=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "on_main=false" >> "$GITHUB_OUTPUT"
+          fi
+          COMMITS=$(git log --oneline origin/main..HEAD | wc -l)
+          echo "count=$COMMITS" >> "$GITHUB_OUTPUT"
+
+      - name: Post result
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const onMain = '${{ steps.check.outputs.on_main }}' === 'true';
+            const count = parseInt('${{ steps.check.outputs.count }}', 10);
+            let body;
+            if (onMain) {
+              body = [
+                '## Challenge 10: PR is from the main branch',
+                '',
+                'This challenge asks you to create a **feature branch**, make a commit locally, ',
+                'and push it. Your PR appears to come from main itself.',
+                '',
+                'See [Chapter 14: Git in Practice](https://github.com/Community-Access/git-going-with-github/blob/main/docs/14-git-in-practice.md) for branching instructions.'
+              ].join('\n');
+            } else if (count === 0) {
+              body = [
+                '## Challenge 10: No new commits found',
+                '',
+                'The branch exists but has no commits ahead of main. ',
+                'Make sure you committed your changes before pushing.',
+              ].join('\n');
+            } else {
+              body = [
+                '## Challenge 10: Local commit verified!',
+                '',
+                'Found ' + count + ' commit(s) on branch `' + '${{ github.head_ref }}' + '`. ',
+                'Your local Git workflow is working. Well done!'
+              ].join('\n');
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

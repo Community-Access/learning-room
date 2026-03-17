@@ -1,0 +1,83 @@
+name: "Challenge 7: Merge Conflict Resolution Check"
+# Validates that the student resolved all merge conflict markers
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "docs/welcome.md"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-conflict-markers:
+    name: Verify Conflict Resolution
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Check for conflict markers
+        id: check
+        run: |
+          MARKERS=$(grep -rn '<<<<<<< \|======= \|>>>>>>> ' docs/ || true)
+          if [ -n "$MARKERS" ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "$MARKERS" > /tmp/markers.txt
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check for substantive content
+        id: content
+        run: |
+          LINES=$(wc -l < docs/welcome.md)
+          if [ "$LINES" -lt 5 ]; then
+            echo "empty=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "empty=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post result
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const hasMarkers = '${{ steps.check.outputs.found }}' === 'true';
+            const isEmpty = '${{ steps.content.outputs.empty }}' === 'true';
+            let body;
+            if (hasMarkers) {
+              body = [
+                '## Challenge 7: Conflict markers still present',
+                '',
+                'Your PR still contains Git conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). ',
+                'These need to be removed as part of resolving the merge conflict.',
+                '',
+                '**What to do:** Open the file, find the conflict markers, decide which lines to keep, ',
+                'and delete the marker lines. Then commit and push again.',
+                '',
+                'See [Chapter 7: Merge Conflicts](https://github.com/Community-Access/git-going-with-github/blob/main/docs/07-merge-conflicts.md) for help.'
+              ].join('\n');
+            } else if (isEmpty) {
+              body = [
+                '## Challenge 7: File looks empty',
+                '',
+                'The conflict was resolved but the file has very little content. ',
+                'Make sure you kept the lines you intended to keep.',
+              ].join('\n');
+            } else {
+              body = [
+                '## Challenge 7: Conflict resolution looks good!',
+                '',
+                'No conflict markers found and the file has substantive content. Well done!'
+              ].join('\n');
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

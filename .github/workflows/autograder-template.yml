@@ -1,0 +1,97 @@
+name: "Challenge 14: Issue Template Validation"
+# Validates that the student created a custom YAML issue template
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - ".github/ISSUE_TEMPLATE/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-template:
+    name: Verify Custom Issue Template
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Find and validate template
+        id: check
+        run: |
+          # Look for student-created templates (not our pre-existing ones)
+          TEMPLATES=$(find .github/ISSUE_TEMPLATE -name '*.yml' \
+            ! -name 'challenge-*.yml' \
+            ! -name 'bonus-*.yml' \
+            ! -name 'config.yml' 2>/dev/null || true)
+          
+          if [ -z "$TEMPLATES" ]; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          
+          # Check the first custom template for a name field
+          FIRST=$(echo "$TEMPLATES" | head -1)
+          echo "file=$FIRST" >> "$GITHUB_OUTPUT"
+          
+          if grep -q '^name:' "$FIRST"; then
+            echo "has_name=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_name=false" >> "$GITHUB_OUTPUT"
+          fi
+          
+          if grep -q '^description:' "$FIRST"; then
+            echo "has_desc=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_desc=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post result
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const found = '${{ steps.check.outputs.found }}' === 'true';
+            const hasName = '${{ steps.check.outputs.has_name }}' === 'true';
+            const hasDesc = '${{ steps.check.outputs.has_desc }}' === 'true';
+            const file = '${{ steps.check.outputs.file }}';
+            let body;
+            if (!found) {
+              body = [
+                '## Challenge 14: No custom template found',
+                '',
+                'Create a new `.yml` file in `.github/ISSUE_TEMPLATE/` with at least ',
+                'a `name:` and `description:` field.',
+                '',
+                'See [Chapter 17: Issue Templates](https://github.com/Community-Access/git-going-with-github/blob/main/docs/17-issue-templates.md) for the YAML format.'
+              ].join('\n');
+            } else if (!hasName || !hasDesc) {
+              const missing = [];
+              if (!hasName) missing.push('`name:`');
+              if (!hasDesc) missing.push('`description:`');
+              body = [
+                '## Challenge 14: Template found but missing required fields',
+                '',
+                'Found `' + file + '` but it is missing: ' + missing.join(', ') + '.',
+                '',
+                'Add the missing fields and push again.'
+              ].join('\n');
+            } else {
+              body = [
+                '## Challenge 14: Custom issue template looks great!',
+                '',
+                'Found `' + file + '` with valid `name` and `description` fields. Well done!'
+              ].join('\n');
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
