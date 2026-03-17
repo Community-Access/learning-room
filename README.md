@@ -15,3 +15,7 @@ Or use this direct link while signed in: https://github.com/Community-Access/lea
 ## Workshop Resources
 
 - Workshop materials: https://github.com/Community-Access/git-going-with-github
+- Challenge List (Your Mission Briefing): https://github.com/Community-Access/git-going-with-github/blob/main/docs/CHALLENGES.md
+
+---
+> ⚠️ **Note to Organizers / Instructors:** This repository is a Template Sandbox. **Do not run a workshop out of this repository** directly or you will inherit the commit history of every past student. To run a new cohort, click **Use this template** to create a fresh copy, name it `learning-room-[season]-[year]`, and edit the Course Guide in the curriculum repository to point to your new instance.
