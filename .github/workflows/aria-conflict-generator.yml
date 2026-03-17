@@ -1,0 +1,50 @@
+name: agent-conflict-generator
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  generate-conflict:
+    if: github.event.issue.title != '' && github.event.comment.body == '@Aria generate conflict'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: $\{{ secrets.GITHUB_TOKEN \}}
+
+      - name: 'Identify Student Branch'
+        id: branch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueUser = context.payload.issue.assignee ? context.payload.issue.assignee.login : context.payload.issue.user.login;
+            const branchName = 'fix/' + issueUser + '-issue' + context.payload.issue.number;
+            
+            // Comment back acknowledging the request
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: 👋 **Aria here!** I'm jumping onto your branch (\${branchName}\) right now to simulate a coworker changing a file while you weren't looking. Try to push your code in a minute, and you should get a nice real-world rejection! Good luck resolving it!
+            });
+            core.setOutput('branch', branchName);
+
+      - name: 'Checkout and create conflicting commit'
+        run: |
+          git config --global user.name "Aria (Agent)"
+          git config --global user.email "aria@agent.local"
+          
+          # Fetch tracking branch or default to main
+          git fetch origin $\{{ steps.branch.outputs.branch \}} || git fetch origin main
+          git checkout $\{{ steps.branch.outputs.branch \}} || git checkout -b $\{{ steps.branch.outputs.branch \}} origin/main
+          
+          echo 'This is the rogue content injected by Aria.' > docs/sandbox.md
+          echo 'It exists solely to cause a merge conflict for Chapter 7.' >> docs/sandbox.md
+          
+          git add docs/sandbox.md
+          git commit -m "feat: aria injected conflicting code"
+          git push -u origin HEAD
