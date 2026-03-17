@@ -9,6 +9,8 @@ on:
     types: [submitted]
   issue_comment:
     types: [created]
+  issues:
+    types: [opened]
 
 permissions:
   contents: read
@@ -17,6 +19,50 @@ permissions:
   statuses: write
 
 jobs:
+  welcome-issue-timer:
+    name: Welcome to Your First Issue
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'opened'
+    steps:
+      - name: Greet First Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const { data: issues } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'all',
+                creator: context.payload.issue.user.login
+              });
+
+              // Only count actual issues (exclude PRs which are also treated as issues in the API sometimes, though creator filter helps)
+              const firstIssue = issues.filter(i => !i.pull_request).length === 1;
+
+              if (firstIssue) {
+                const welcomeBody = [
+                  '## Workspace Agent Aria: Welcome to Your First Issue! 👋',
+                  '',
+                  'Hi @' + context.payload.issue.user.login + '! I am Aria. Great job successfully opening an Issue!',
+                  '',
+                  'Remember, a good Issue for a human is also a perfect **prompt** for an AI. By carefully describing the problem here, you are already practicing how to command your custom Capstone Agent tomorrow!',
+                  '',
+                  'Keep up the great work!',
+                  '---',
+                  '*This is an automated message from Aria 🤖, your friendly Workshop Agent.*'
+                ].join('\n');
+
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.issue.number,
+                  body: welcomeBody
+                });
+              }
+            } catch (error) {
+              console.error('Error verifying first issue:', error);
+            }
+
   welcome-first-timer:
     name: Welcome First-Time Contributor
     runs-on: ubuntu-latest
@@ -62,7 +108,7 @@ jobs:
                   'Your perspective and effort matter!',
                   '',
                   '---',
-                  '*This is an automated message from the Learning Room Bot.*'
+                  '*This is an automated message from the Aria the Workshop Agent.*'
                 ].join('\n');
 
                 await github.rest.issues.createComment({
