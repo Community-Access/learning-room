@@ -7,7 +7,7 @@ This reference lists keyboard shortcuts for navigating GitHub with a screen read
 
 #### NVDA (Windows)
 
-NVDA is a free, open source screen reader for Windows. Download it from [nvaccess.org](htps://nvaccess.org).
+NVDA is a free, open source screen reader for Windows. Download it from [nvaccess.org](https://nvaccess.org).
 
 #### Single-Key Navigation (Browse Mode)
 
