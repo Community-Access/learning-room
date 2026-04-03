@@ -5,16 +5,6 @@ Use this sample to understand what conflict markers look like and what the resol
 ## Conflict Marker Example
 
 ```text
-<<<<<<< HEAD
-Use Command Palette to open settings.
-=======
-Open settings from the gear icon.
->>>>>>> feature/chapter-6-example
-```
-
-## Resolved Version Example
-
-```text
 Open settings from Command Palette or the gear icon.
 ```
 
