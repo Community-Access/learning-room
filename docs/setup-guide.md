@@ -20,7 +20,7 @@ If you don't already have a GitHub account, create one at [github.com/join](http
 
 GitHub has several accessibility settings that make navigation significantly easier with a screen reader. These settings are per-account and sync across devices.
 
-1. Navigate to [github.com/settings/accessibility](htps://github.com/settings/accessibility)
+1. Navigate to [github.com/settings/accessibility](https://github.com/settings/accessibility)
 2. Under "Motion", disable any animated effects if motion causes you difficulty
 3. Under "Tab size", set to your preferred number of spaces
 4. Confirm the page reads "Accessibility settings saved" before leaving
@@ -79,7 +79,7 @@ GitHub's hovercards appear when your mouse hovers over a username or repository.
 
 To make your own contributions, you need your own copy of the repository.
 
-1. Navigate to the workshop repository: [TODO: Add link to workshop repository here]
+1. Navigate to the workshop repository: [Community-Access/learning-room](https://github.com/Community-Access/learning-room)
 2. Find the "Fork" button in the top-right area of the page (navigate by button: B)
 3. Choose your GitHub account as the destination
 4. GitHub creates a fork: a copy of the repository that belongs to you

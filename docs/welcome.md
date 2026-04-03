@@ -21,7 +21,7 @@ You do not need to be a professional developer to contribute. Documentation, acc
 
 ## Who Can Contribute?
 
-[TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
+ It is worth to say, that contributors come from all backgrounds, skill levels, and countries. And we have to emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.
 
 Everybody can contribute open source projects. Contributors come from all backgrounds, skill levels, and countries. Using assistive technologies is not a barrier to contributions. In fact, AT users bring a perspective which improves projects for everyone.
 
@@ -47,7 +47,7 @@ Most open source projects label issues that are suitable for new contributors. L
 - `help wanted`
 - `beginner`
 
-[TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
+If we want to take an issue to work on it, we should first make sure that no one is working on it, and before that the description of the issue should be obvious, and we feel we have interest for it,  and we have the knowledge to fix it.
 
 ---
 
@@ -69,8 +69,8 @@ When your pull request is merged:
 - The issue you fixed is closed
 - You are officially listed as a contributor to this project
 
-[TODO: Add a sentence or two about what this means for someone's GitHub profile and open source portfolio.]
+Contributing to open source projects on GitHub not only strengthens your technical skills but also enhances your public profile, showcasing your collaboration and problem‑solving abilities. Each contribution becomes part of your open source portfolio, demonstrating your commitment to community‑driven development and making your work visible to potential employers, collaborators, and the wider developer community.  
 
 ---
 
-*Last reviewed: [DATE]*
+*Last reviewed: 2026-03-30*
