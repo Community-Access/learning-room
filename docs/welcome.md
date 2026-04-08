@@ -21,7 +21,8 @@ You do not need to be a professional developer to contribute. Documentation, acc
 
 ## Who Can Contribute?
 
-[TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
+Everyone can!
+
 
 Everybody can contribute open source projects. Contributors come from all backgrounds, skill levels, and countries. Using assistive technologies is not a barrier to contributions. In fact, AT users bring a perspective which improves projects for everyone.
 
@@ -73,4 +74,4 @@ When your pull request is merged:
 
 ---
 
-*Last reviewed: [DATE]*
+*Last reviewed: [March 8, 2026]*
